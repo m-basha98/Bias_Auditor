@@ -5,10 +5,10 @@
 ### IDE Interaction Window
 Here is an example of how users interact with the tool in the IDE:
 
-<p align="center">
-  <img src="assets/ide_interaction.png" width="48%" alt="IDE Interaction Step 1" />
-  <img src="assets/ide_interaction_2.png" width="48%" alt="IDE Interaction Step 2" />
-</p>
+![IDE Interaction Window with Qwen](assets/ide_interaction.png)
+
+![IDE Interaction Window with Gemini using API Key](assets/ide_interaction_2.png)
+
 
 ### PDF Bias Report Example
 
