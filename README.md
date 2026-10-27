@@ -5,7 +5,10 @@
 ### IDE Interaction Window
 Here is an example of how users interact with the tool in the IDE:
 
-![IDE Interaction Window](assets/ide_interaction.png)
+<p align="center">
+  <img src="assets/ide_interaction.png" width="48%" alt="IDE Interaction Step 1" />
+  <img src="assets/ide_interaction_2.png" width="48%" alt="IDE Interaction Step 2" />
+</p>
 
 ### PDF Bias Report Example
 
