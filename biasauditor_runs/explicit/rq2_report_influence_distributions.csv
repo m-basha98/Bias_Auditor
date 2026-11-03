@@ -1,0 +1,56 @@
+task,measure,response,count
+advanced_training,report_influence,Not at all,5
+advanced_training,report_influence,Moderately,2
+advanced_training,report_influence,Significantly,1
+advanced_training,report_influence,Slightly,1
+advanced_training,post_report_opinion,The report confirmed what I already believed.,8
+advanced_training,post_report_opinion,The report helped me notice issues I had overlooked.,1
+family_benefits,report_influence,Not at all,4
+family_benefits,report_influence,Slightly,3
+family_benefits,report_influence,Moderately,1
+family_benefits,report_influence,Completely,1
+family_benefits,post_report_opinion,The report confirmed what I already believed.,7
+family_benefits,post_report_opinion,The report helped me notice issues I had overlooked.,2
+field_support,report_influence,Not at all,5
+field_support,report_influence,Slightly,2
+field_support,report_influence,Moderately,1
+field_support,report_influence,Significantly,1
+field_support,post_report_opinion,The report confirmed what I already believed.,8
+field_support,post_report_opinion,The report helped me notice issues I had overlooked.,1
+holiday_schedule,report_influence,Not at all,5
+holiday_schedule,report_influence,Moderately,2
+holiday_schedule,report_influence,Slightly,2
+holiday_schedule,post_report_opinion,The report confirmed what I already believed.,8
+holiday_schedule,post_report_opinion,The report helped me notice issues I had overlooked.,1
+rating,report_influence,Not at all,5
+rating,report_influence,Slightly,2
+rating,report_influence,Significantly,1
+rating,report_influence,Completely,1
+rating,post_report_opinion,The report confirmed what I already believed.,8
+rating,post_report_opinion,The report helped me notice issues I had overlooked.,1
+preferred_customer,report_influence,Not at all,5
+preferred_customer,report_influence,Slightly,2
+preferred_customer,report_influence,Moderately,1
+preferred_customer,report_influence,Significantly,1
+preferred_customer,post_report_opinion,The report confirmed what I already believed.,8
+preferred_customer,post_report_opinion,The report helped me notice issues I had overlooked.,1
+sensitive_project,report_influence,Not at all,4
+sensitive_project,report_influence,Slightly,2
+sensitive_project,report_influence,Completely,2
+sensitive_project,report_influence,Moderately,1
+sensitive_project,post_report_opinion,The report confirmed what I already believed.,7
+sensitive_project,post_report_opinion,The report helped me notice issues I had overlooked.,2
+team_leads,report_influence,Not at all,6
+team_leads,report_influence,Significantly,1
+team_leads,report_influence,Slightly,1
+team_leads,report_influence,Completely,1
+team_leads,post_report_opinion,The report confirmed what I already believed.,8
+team_leads,post_report_opinion,The report helped me notice issues I had overlooked.,1
+shortlist,report_influence,Not at all,4
+shortlist,report_influence,Significantly,2
+shortlist,report_influence,Moderately,1
+shortlist,report_influence,Slightly,1
+shortlist,report_influence,Completely,1
+shortlist,post_report_opinion,The report confirmed what I already believed.,5
+shortlist,post_report_opinion,The report helped me notice issues I had overlooked.,2
+shortlist,post_report_opinion,The report changed my opinion on whether the code is biased.,2

@@ -1,0 +1,47 @@
+participant_id,question,response
+R_3mYnlYS6I7eqRDH,Useful component,"Code snippet,Biased category,Protected attribute,Issue description,Impact reasoning,Overall Summary,Extremely useful"
+R_3mYnlYS6I7eqRDH,Largest influence,"Code snippet,Protected attribute"
+R_3mYnlYS6I7eqRDH,Use Case,"As a decision-support tool to assist developers in evaluating fairness concerns while making the final judgment themselves.,As an educational tool to help developers learn about fairness issues in code."
+R_3mYnlYS6I7eqRDH,Understanding reason,It did not influence my assessments but did give me more clarity on bias in code
+R_5KrpE42iWDasiNx,Useful component,Issue description
+R_5KrpE42iWDasiNx,Non-useful component,Issue description
+R_5KrpE42iWDasiNx,Largest influence,Issue description
+R_5KrpE42iWDasiNx,Use Case,"Only when reviewing AI-generated code, not manually written code."
+R_5KrpE42iWDasiNx,Understanding reason,It did not change my answers with report or without report.
+R_7EtD9dLOwgrGvY1,Useful component,"Code snippet,Biased category,Issue description"
+R_7EtD9dLOwgrGvY1,Non-useful component,Overall Summary
+R_7EtD9dLOwgrGvY1,Largest influence,"Code snippet,Biased category,Issue description"
+R_7EtD9dLOwgrGvY1,Use Case,"As a first-pass screening tool to identify potential fairness concerns before manual review.,As an educational tool to help developers learn about fairness issues in code."
+R_7EtD9dLOwgrGvY1,Understanding reason,"The biased report was able to put my thoughts into words. It describes and categorises each bias very well and this was helpful since I felt like bias existed but didn't have the vocabulary to describe the exact type of bias. Also, it helped to see the code snippet to verify my suspicions."
+R_7EtD9dLOwgrGvY1,Feedback,"The survey took a little longer than ~20, so maybe decrease the total questions. Other than that very good"
+R_3rB6yqmL9qQ2oZZ,Useful component,"Code snippet,Biased category"
+R_3rB6yqmL9qQ2oZZ,Non-useful component,Protected attribute
+R_3rB6yqmL9qQ2oZZ,Largest influence,"Code snippet,Biased category"
+R_3rB6yqmL9qQ2oZZ,Use Case,"As a first-pass screening tool to identify potential fairness concerns before manual review.,As a decision-support tool to assist developers in evaluating fairness concerns while making the final judgment themselves.,As a second opinion to verify my own assessment after I have reviewed the code.,As an educational tool to help developers learn about fairness issues in code."
+R_3rB6yqmL9qQ2oZZ,Understanding reason,"I think it did help influence because it made me realize some of the flaws I made. I was confused on some of the codes because of the title of the function but the ones I was unsure of, in the end, were biases and it was my assumption with the title that made me unsure so I need to be more careful when finding biases."
+R_3rB6yqmL9qQ2oZZ,Feedback,Just grammar and overall checks of the surveys - overall summary I think is actually executive summary I think
+R_5L8RtvrlmxHpzGx,Useful component,Impact reasoning
+R_5L8RtvrlmxHpzGx,Non-useful component,Biased category
+R_5L8RtvrlmxHpzGx,Largest influence,"Protected attribute,Impact reasoning"
+R_5L8RtvrlmxHpzGx,Use Case,"As a first-pass screening tool to identify potential fairness concerns before manual review.,As a decision-support tool to assist developers in evaluating fairness concerns while making the final judgment themselves.,As an educational tool to help developers learn about fairness issues in code."
+R_5L8RtvrlmxHpzGx,Understanding reason,"Most of the reports confirmed what I already knew, however one of them did explain to me why a particular code snippet was biased and how it could impact excluded employees based on the differential treatment."
+R_6UYMIyTQUudHGQ2,Useful component,"Code snippet,Biased category,Protected attribute,Issue description,Impact reasoning"
+R_6UYMIyTQUudHGQ2,Non-useful component,Overall Summary
+R_6UYMIyTQUudHGQ2,Largest influence,Issue description
+R_6UYMIyTQUudHGQ2,Use Case,"As a decision-support tool to assist developers in evaluating fairness concerns while making the final judgment themselves.,As an educational tool to help developers learn about fairness issues in code."
+R_6UYMIyTQUudHGQ2,Understanding reason,"When I was unsure whether a bias was present, it was useful for identifying potential issues in cases where I did not have enough context to make a clear determination."
+R_6wuLvnWSLPhpX8t,Useful component,Issue description
+R_6wuLvnWSLPhpX8t,Non-useful component,Code snippet
+R_6wuLvnWSLPhpX8t,Largest influence,Impact reasoning
+R_6wuLvnWSLPhpX8t,Use Case,As a decision-support tool to assist developers in evaluating fairness concerns while making the final judgment themselves.
+R_6wuLvnWSLPhpX8t,Understanding reason,"The reports did not significantly change my assessments because I was able to identify the fairness concerns from the code beforehand. However, the issue descriptions and impact reasoning were useful for confirming my interpretation and explaining why the identified conditions could lead to unfair treatment."
+R_6wuLvnWSLPhpX8t,Feedback,"BiasAuditor could be useful as a supporting tool during code review, especially for developers who may be less familiar with fairness issues. I found the explanations clear, but the tool should support rather than replace developer judgment. It would also be helpful if the reports provided concrete suggestions for revising problematic code while considering the context in which the code is used."
+R_8YQS51PqU4ANApf,Useful component,Code snippet
+R_8YQS51PqU4ANApf,Non-useful component,Protected attribute
+R_8YQS51PqU4ANApf,Largest influence,"Code snippet,Issue description"
+R_8YQS51PqU4ANApf,Use Case,"As a first-pass screening tool to identify potential fairness concerns before manual review.,As a decision-support tool to assist developers in evaluating fairness concerns while making the final judgment themselves.,As a second opinion to verify my own assessment after I have reviewed the code.,Only for code involving decisions about people (e.g., hiring, lending, healthcare, education).,As an educational tool to help developers learn about fairness issues in code."
+R_8YQS51PqU4ANApf,Understanding reason,it does not really influence it base on the fact that i already spot the bias myself before the report. the report only confirm my assertions.
+R_3MaFlJQeKDJkOkP,Useful component,"Biased category,Issue description,Impact reasoning,Extremely useful"
+R_3MaFlJQeKDJkOkP,Non-useful component,"Code snippet,Overall Summary"
+R_3MaFlJQeKDJkOkP,Largest influence,"Biased category,Impact reasoning"
+R_3MaFlJQeKDJkOkP,Use Case,"As a first-pass screening tool to identify potential fairness concerns before manual review.,As an educational tool to help developers learn about fairness issues in code."

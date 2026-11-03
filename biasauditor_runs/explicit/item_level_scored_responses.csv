@@ -1,0 +1,82 @@
+participant_id,task,gold_label,baseline_answer,assisted_answer,baseline_correct,assisted_correct,baseline_selected_lines,gold_lines,assisted_selected_lines,baseline_line_precision,baseline_line_recall,baseline_line_f1,baseline_line_exact_match,assisted_line_precision,assisted_line_recall,assisted_line_f1,assisted_line_exact_match,baseline_confidence,assisted_confidence,report_influence,post_report_opinion,identification_changed
+R_3mYnlYS6I7eqRDH,advanced_training,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,4,4,Not at all,The report confirmed what I already believed.,0.0
+R_3mYnlYS6I7eqRDH,family_benefits,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,4,4,Slightly,The report helped me notice issues I had overlooked.,0.0
+R_3mYnlYS6I7eqRDH,field_support,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,4,4,Not at all,The report confirmed what I already believed.,0.0
+R_3mYnlYS6I7eqRDH,holiday_schedule,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,4,4,Not at all,The report confirmed what I already believed.,0.0
+R_3mYnlYS6I7eqRDH,rating,no,no,no,1.0,1,,,,1.0,1.0,1.0,1,1.0,1.0,1.0,1,4,4,Not at all,The report confirmed what I already believed.,0.0
+R_3mYnlYS6I7eqRDH,preferred_customer,yes,yes,yes,1.0,1,4,"1,4",4,1.0,0.5,0.6666666666666666,0,1.0,0.5,0.6666666666666666,0,4,4,Not at all,The report confirmed what I already believed.,0.0
+R_3mYnlYS6I7eqRDH,sensitive_project,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,4,4,Not at all,The report confirmed what I already believed.,0.0
+R_3mYnlYS6I7eqRDH,team_leads,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,4,4,Not at all,The report confirmed what I already believed.,0.0
+R_3mYnlYS6I7eqRDH,shortlist,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,4,4,Not at all,The report confirmed what I already believed.,0.0
+R_5KrpE42iWDasiNx,advanced_training,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,3,3,Moderately,The report confirmed what I already believed.,0.0
+R_5KrpE42iWDasiNx,family_benefits,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,4,3,Moderately,The report confirmed what I already believed.,0.0
+R_5KrpE42iWDasiNx,field_support,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,3,3,Moderately,The report confirmed what I already believed.,0.0
+R_5KrpE42iWDasiNx,holiday_schedule,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,3,3,Moderately,The report confirmed what I already believed.,0.0
+R_5KrpE42iWDasiNx,rating,no,no,no,1.0,1,,,,1.0,1.0,1.0,1,1.0,1.0,1.0,1,3,3,Significantly,The report confirmed what I already believed.,0.0
+R_5KrpE42iWDasiNx,preferred_customer,yes,no,no,0.0,0,,"1,4",,0.0,0.0,0.0,0,0.0,0.0,0.0,0,3,3,Moderately,The report confirmed what I already believed.,0.0
+R_5KrpE42iWDasiNx,sensitive_project,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,3,2,Moderately,The report confirmed what I already believed.,0.0
+R_5KrpE42iWDasiNx,team_leads,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,3,3,Significantly,The report confirmed what I already believed.,0.0
+R_5KrpE42iWDasiNx,shortlist,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,3,3,Moderately,The report confirmed what I already believed.,0.0
+R_7EtD9dLOwgrGvY1,advanced_training,yes,yes,yes,1.0,1,4,4,"4,5",1.0,1.0,1.0,1,0.5,1.0,0.6666666666666666,1,4,4,Significantly,The report helped me notice issues I had overlooked.,0.0
+R_7EtD9dLOwgrGvY1,family_benefits,yes,yes,yes,1.0,1,4,4,"4,5",1.0,1.0,1.0,1,0.5,1.0,0.6666666666666666,1,4,4,Slightly,The report helped me notice issues I had overlooked.,0.0
+R_7EtD9dLOwgrGvY1,field_support,yes,yes,yes,1.0,1,4,4,"4,5",1.0,1.0,1.0,1,0.5,1.0,0.6666666666666666,1,4,4,Slightly,The report helped me notice issues I had overlooked.,0.0
+R_7EtD9dLOwgrGvY1,holiday_schedule,yes,yes,yes,1.0,1,4,4,"4,5",1.0,1.0,1.0,1,0.5,1.0,0.6666666666666666,1,4,4,Slightly,The report helped me notice issues I had overlooked.,0.0
+R_7EtD9dLOwgrGvY1,rating,no,no,no,1.0,1,,,,1.0,1.0,1.0,1,1.0,1.0,1.0,1,3,4,Slightly,The report helped me notice issues I had overlooked.,0.0
+R_7EtD9dLOwgrGvY1,preferred_customer,yes,yes,yes,1.0,1,4,"1,4","4,5",1.0,0.5,0.6666666666666666,0,0.5,0.5,0.5,0,4,4,Slightly,The report helped me notice issues I had overlooked.,0.0
+R_7EtD9dLOwgrGvY1,sensitive_project,yes,yes,yes,1.0,1,4,4,"4,5",1.0,1.0,1.0,1,0.5,1.0,0.6666666666666666,1,4,4,Slightly,The report helped me notice issues I had overlooked.,0.0
+R_7EtD9dLOwgrGvY1,team_leads,yes,yes,yes,1.0,1,4,4,"4,5",1.0,1.0,1.0,1,0.5,1.0,0.6666666666666666,1,4,4,Slightly,The report helped me notice issues I had overlooked.,0.0
+R_7EtD9dLOwgrGvY1,shortlist,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,4,4,Slightly,The report helped me notice issues I had overlooked.,0.0
+R_3rB6yqmL9qQ2oZZ,advanced_training,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,3,5,Not at all,The report confirmed what I already believed.,0.0
+R_3rB6yqmL9qQ2oZZ,family_benefits,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,5,5,Not at all,The report confirmed what I already believed.,0.0
+R_3rB6yqmL9qQ2oZZ,field_support,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,5,5,Not at all,The report confirmed what I already believed.,0.0
+R_3rB6yqmL9qQ2oZZ,holiday_schedule,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,5,5,Not at all,The report confirmed what I already believed.,0.0
+R_3rB6yqmL9qQ2oZZ,rating,no,no,no,1.0,1,,,,1.0,1.0,1.0,1,1.0,1.0,1.0,1,4,5,Slightly,The report confirmed what I already believed.,0.0
+R_3rB6yqmL9qQ2oZZ,preferred_customer,yes,yes,yes,1.0,1,"1,4","1,4","1,4",1.0,1.0,1.0,1,1.0,1.0,1.0,1,4,5,Not at all,The report confirmed what I already believed.,0.0
+R_3rB6yqmL9qQ2oZZ,sensitive_project,yes,unsure,yes,,1,4,4,"1,4",1.0,1.0,1.0,1,0.5,1.0,0.6666666666666666,0,3,5,Completely,The report helped me notice issues I had overlooked.,
+R_3rB6yqmL9qQ2oZZ,team_leads,yes,yes,yes,1.0,1,4,4,"1,4",1.0,1.0,1.0,1,0.5,1.0,0.6666666666666666,0,5,5,Not at all,The report confirmed what I already believed.,0.0
+R_3rB6yqmL9qQ2oZZ,shortlist,yes,unsure,yes,,1,"1,4",4,4,0.5,1.0,0.6666666666666666,0,1.0,1.0,1.0,1,3,4,Significantly,The report changed my opinion on whether the code is biased.,
+R_5L8RtvrlmxHpzGx,advanced_training,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,5,5,Slightly,The report confirmed what I already believed.,0.0
+R_5L8RtvrlmxHpzGx,family_benefits,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,5,5,Slightly,The report confirmed what I already believed.,0.0
+R_5L8RtvrlmxHpzGx,field_support,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,3,4,Slightly,The report confirmed what I already believed.,0.0
+R_5L8RtvrlmxHpzGx,holiday_schedule,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,4,5,Moderately,The report confirmed what I already believed.,0.0
+R_5L8RtvrlmxHpzGx,rating,no,no,no,1.0,1,,,,1.0,1.0,1.0,1,1.0,1.0,1.0,1,5,5,Not at all,The report confirmed what I already believed.,0.0
+R_5L8RtvrlmxHpzGx,preferred_customer,yes,yes,yes,1.0,1,"4,5","1,4",4,0.5,0.5,0.5,0,1.0,0.5,0.6666666666666666,0,4,5,Slightly,The report confirmed what I already believed.,0.0
+R_5L8RtvrlmxHpzGx,sensitive_project,yes,yes,yes,1.0,1,"4,5",4,4,0.5,1.0,0.6666666666666666,1,1.0,1.0,1.0,1,5,5,Slightly,The report confirmed what I already believed.,0.0
+R_5L8RtvrlmxHpzGx,team_leads,yes,yes,yes,1.0,1,"4,5",4,"4,5",0.5,1.0,0.6666666666666666,1,0.5,1.0,0.6666666666666666,1,5,5,Not at all,The report confirmed what I already believed.,0.0
+R_5L8RtvrlmxHpzGx,shortlist,yes,no,yes,0.0,1,,4,4,0.0,0.0,0.0,0,1.0,1.0,1.0,1,3,5,Significantly,The report changed my opinion on whether the code is biased.,1.0
+R_6UYMIyTQUudHGQ2,advanced_training,yes,yes,yes,1.0,1,"4,5",4,4,0.5,1.0,0.6666666666666666,1,1.0,1.0,1.0,1,4,5,Moderately,The report confirmed what I already believed.,0.0
+R_6UYMIyTQUudHGQ2,family_benefits,yes,yes,yes,1.0,1,"4,5",4,"1,4,5",0.5,1.0,0.6666666666666666,1,0.3333333333333333,1.0,0.5,0,4,5,Completely,The report confirmed what I already believed.,0.0
+R_6UYMIyTQUudHGQ2,field_support,yes,yes,yes,1.0,1,"4,5",4,"4,5",0.5,1.0,0.6666666666666666,1,0.5,1.0,0.6666666666666666,1,4,3,Significantly,The report confirmed what I already believed.,0.0
+R_6UYMIyTQUudHGQ2,holiday_schedule,yes,yes,yes,1.0,1,"4,5",4,"4,5",0.5,1.0,0.6666666666666666,1,0.5,1.0,0.6666666666666666,1,4,5,Slightly,The report confirmed what I already believed.,0.0
+R_6UYMIyTQUudHGQ2,rating,no,no,no,1.0,1,,,,1.0,1.0,1.0,1,1.0,1.0,1.0,1,5,4,Completely,The report confirmed what I already believed.,0.0
+R_6UYMIyTQUudHGQ2,preferred_customer,yes,yes,yes,1.0,1,"1,4,5","1,4","4,5",0.6666666666666666,1.0,0.8,1,0.5,0.5,0.5,0,5,4,Significantly,The report confirmed what I already believed.,0.0
+R_6UYMIyTQUudHGQ2,sensitive_project,yes,yes,yes,1.0,1,"4,5",4,"4,5",0.5,1.0,0.6666666666666666,1,0.5,1.0,0.6666666666666666,1,3,5,Completely,The report confirmed what I already believed.,0.0
+R_6UYMIyTQUudHGQ2,team_leads,yes,yes,yes,1.0,1,"4,5",4,"4,5",0.5,1.0,0.6666666666666666,1,0.5,1.0,0.6666666666666666,1,5,5,Completely,The report confirmed what I already believed.,0.0
+R_6UYMIyTQUudHGQ2,shortlist,yes,unsure,yes,,1,,4,"4,5",0.0,0.0,0.0,0,0.5,1.0,0.6666666666666666,1,2,4,Completely,The report helped me notice issues I had overlooked.,
+R_6wuLvnWSLPhpX8t,advanced_training,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,5,5,Not at all,The report confirmed what I already believed.,0.0
+R_6wuLvnWSLPhpX8t,family_benefits,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,5,5,Not at all,The report confirmed what I already believed.,0.0
+R_6wuLvnWSLPhpX8t,field_support,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,5,5,Not at all,The report confirmed what I already believed.,0.0
+R_6wuLvnWSLPhpX8t,holiday_schedule,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,5,5,Not at all,The report confirmed what I already believed.,0.0
+R_6wuLvnWSLPhpX8t,rating,no,no,no,1.0,1,,,,1.0,1.0,1.0,1,1.0,1.0,1.0,1,5,5,Not at all,The report confirmed what I already believed.,0.0
+R_6wuLvnWSLPhpX8t,preferred_customer,yes,yes,yes,1.0,1,4,"1,4",4,1.0,0.5,0.6666666666666666,0,1.0,0.5,0.6666666666666666,0,5,5,Not at all,The report confirmed what I already believed.,0.0
+R_6wuLvnWSLPhpX8t,sensitive_project,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,5,5,Not at all,The report confirmed what I already believed.,0.0
+R_6wuLvnWSLPhpX8t,team_leads,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,5,5,Not at all,The report confirmed what I already believed.,0.0
+R_6wuLvnWSLPhpX8t,shortlist,yes,no,no,0.0,0,,4,,0.0,0.0,0.0,0,0.0,0.0,0.0,0,4,5,Not at all,The report confirmed what I already believed.,0.0
+R_8YQS51PqU4ANApf,advanced_training,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,4,4,Not at all,The report confirmed what I already believed.,0.0
+R_8YQS51PqU4ANApf,family_benefits,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,4,4,Not at all,The report confirmed what I already believed.,0.0
+R_8YQS51PqU4ANApf,field_support,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,4,4,Not at all,The report confirmed what I already believed.,0.0
+R_8YQS51PqU4ANApf,holiday_schedule,yes,yes,yes,1.0,1,"4,5",4,4,0.5,1.0,0.6666666666666666,1,1.0,1.0,1.0,1,4,4,Not at all,The report confirmed what I already believed.,0.0
+R_8YQS51PqU4ANApf,rating,no,no,no,1.0,1,,,4,1.0,1.0,1.0,1,0.0,0.0,0.0,0,4,4,Not at all,The report confirmed what I already believed.,0.0
+R_8YQS51PqU4ANApf,preferred_customer,yes,yes,yes,1.0,1,4,"1,4",4,1.0,0.5,0.6666666666666666,0,1.0,0.5,0.6666666666666666,0,4,4,Not at all,The report confirmed what I already believed.,0.0
+R_8YQS51PqU4ANApf,sensitive_project,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,4,4,Not at all,The report confirmed what I already believed.,0.0
+R_8YQS51PqU4ANApf,team_leads,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,4,4,Not at all,The report confirmed what I already believed.,0.0
+R_8YQS51PqU4ANApf,shortlist,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,4,4,Not at all,The report confirmed what I already believed.,0.0
+R_3MaFlJQeKDJkOkP,advanced_training,yes,yes,yes,1.0,1,"1,4",4,4,0.5,1.0,0.6666666666666666,0,1.0,1.0,1.0,1,3,4,Not at all,The report confirmed what I already believed.,0.0
+R_3MaFlJQeKDJkOkP,family_benefits,yes,yes,yes,1.0,1,"1,4",4,4,0.5,1.0,0.6666666666666666,0,1.0,1.0,1.0,1,4,4,Not at all,The report confirmed what I already believed.,0.0
+R_3MaFlJQeKDJkOkP,field_support,yes,unsure,yes,,1,"1,4",4,4,0.5,1.0,0.6666666666666666,0,1.0,1.0,1.0,1,3,4,Not at all,The report confirmed what I already believed.,
+R_3MaFlJQeKDJkOkP,holiday_schedule,yes,yes,yes,1.0,1,"1,4",4,4,0.5,1.0,0.6666666666666666,0,1.0,1.0,1.0,1,3,1,Not at all,The report confirmed what I already believed.,0.0
+R_3MaFlJQeKDJkOkP,rating,no,no,no,1.0,1,,,,1.0,1.0,1.0,1,1.0,1.0,1.0,1,4,5,Not at all,The report confirmed what I already believed.,0.0
+R_3MaFlJQeKDJkOkP,preferred_customer,yes,yes,yes,1.0,1,"1,4","1,4",4,1.0,1.0,1.0,1,1.0,0.5,0.6666666666666666,0,4,1,Not at all,The report confirmed what I already believed.,0.0
+R_3MaFlJQeKDJkOkP,sensitive_project,yes,yes,yes,1.0,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,5,1,Not at all,The report confirmed what I already believed.,0.0
+R_3MaFlJQeKDJkOkP,team_leads,yes,yes,yes,1.0,1,"1,5",4,4,0.0,0.0,0.0,0,1.0,1.0,1.0,1,5,5,Not at all,The report confirmed what I already believed.,0.0
+R_3MaFlJQeKDJkOkP,shortlist,yes,unsure,yes,,1,4,4,4,1.0,1.0,1.0,1,1.0,1.0,1.0,1,3,4,Not at all,The report confirmed what I already believed.,

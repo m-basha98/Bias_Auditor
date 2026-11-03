@@ -1,0 +1,6 @@
+measure,n_pairs,baseline_mean,assisted_mean,mean_change_assisted_minus_baseline,test,statistic,p_value
+Identification accuracy,9,0.9629629629629629,0.9753086419753088,0.012345679012345685,wilcoxon,0.0,0.31731050786291415
+Mean confidence,9,4.012345679012345,4.148148148148149,0.13580246913580263,wilcoxon,8.0,0.3104944343172349
+Line localization F1,9,0.8555555555555556,0.8662551440329218,0.010699588477366295,wilcoxon,10.0,0.916511907863894
+Exact line-set match rate,9,0.8148148148148147,0.8395061728395061,0.02469135802469137,wilcoxon,7.5,1.0
+Item-level correct identification (exact McNemar),76,0.9605263157894737,0.9753086419753086,0.01478232618583497,exact McNemar (paired item responses),discordant baseline-only=0; assisted-only=1,1.0
