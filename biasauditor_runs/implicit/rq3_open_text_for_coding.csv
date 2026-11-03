@@ -1,0 +1,50 @@
+participant_id,question,response
+R_3F3B3I1KWjS1jPq,Useful component,"Issue description,Impact reasoning,Extremely useful"
+R_3F3B3I1KWjS1jPq,Non-useful component,Protected attribute
+R_3F3B3I1KWjS1jPq,Largest influence,Issue description
+R_3F3B3I1KWjS1jPq,Use Case,"As a first-pass screening tool to identify potential fairness concerns before manual review.,As a second opinion to verify my own assessment after I have reviewed the code.,As an educational tool to help developers learn about fairness issues in code."
+R_3F3B3I1KWjS1jPq,Understanding reason,"it have a clear issuing and explanation for what and why, helping me to confirm my believes and pointing some that a overlooked."
+R_7eDY2mWFjcp9llx,Non-useful component,"Code snippet,Biased category,Protected attribute,Issue description,Impact reasoning,Overall Summary"
+R_7eDY2mWFjcp9llx,Use Case,"Only for code involving decisions about people (e.g., hiring, lending, healthcare, education).,Only when reviewing AI-generated code, not manually written code."
+R_5lL6RTqSGCnj585,Useful component,"Biased category,Issue description,Impact reasoning"
+R_5lL6RTqSGCnj585,Non-useful component,Overall Summary
+R_5lL6RTqSGCnj585,Largest influence,"Issue description,Impact reasoning"
+R_5lL6RTqSGCnj585,Use Case,"As a first-pass screening tool to identify potential fairness concerns before manual review.,As a decision-support tool to assist developers in evaluating fairness concerns while making the final judgment themselves.,As a second opinion to verify my own assessment after I have reviewed the code."
+R_5lL6RTqSGCnj585,Understanding reason,He helped identify issues that had gone unnoticed due to a lack of interpretation and provided the insights necessary for a proper code evaluation. He was excellent and essential
+R_3awQBFq0EM2RWmx,Useful component,"Protected attribute,Issue description,Overall Summary"
+R_3awQBFq0EM2RWmx,Non-useful component,Code snippet
+R_3awQBFq0EM2RWmx,Largest influence,Protected attribute
+R_3awQBFq0EM2RWmx,Use Case,"As a first-pass screening tool to identify potential fairness concerns before manual review.,As a decision-support tool to assist developers in evaluating fairness concerns while making the final judgment themselves.,As an educational tool to help developers learn about fairness issues in code."
+R_3awQBFq0EM2RWmx,Understanding reason,"The bias report helped look into issues I might have overlooked at first glance, particularly when it comes to the protected attributes that might be used to calculate a certain variable."
+R_6EAl4gpzpBfidCu,Useful component,"Code snippet,Biased category,Protected attribute,Issue description,Impact reasoning,Overall Summary"
+R_6EAl4gpzpBfidCu,Largest influence,"Biased category,Protected attribute,Issue description"
+R_6EAl4gpzpBfidCu,Use Case,As a second opinion to verify my own assessment after I have reviewed the code.
+R_6EAl4gpzpBfidCu,Understanding reason,It confirmed most of what I thought are bias.
+R_3Png2alqCtTFaQK,Useful component,Issue description
+R_3Png2alqCtTFaQK,Non-useful component,Protected attribute
+R_3Png2alqCtTFaQK,Largest influence,Issue description
+R_3Png2alqCtTFaQK,Use Case,"As a second opinion to verify my own assessment after I have reviewed the code.,I would rarely or never use this type of tool during code review."
+R_3Png2alqCtTFaQK,Understanding reason,It helped adding context the code alone can't do.
+R_3dhj83nH9mxaGZq,Useful component,"Biased category,Issue description,Impact reasoning,Overall Summary,Extremely useful"
+R_3dhj83nH9mxaGZq,Non-useful component,"Code snippet,Protected attribute"
+R_3dhj83nH9mxaGZq,Largest influence,"Biased category,Issue description,Impact reasoning,Overall Summary"
+R_3dhj83nH9mxaGZq,Use Case,"As a decision-support tool to assist developers in evaluating fairness concerns while making the final judgment themselves.,As a second opinion to verify my own assessment after I have reviewed the code.,As an educational tool to help developers learn about fairness issues in code."
+R_1PTSMjwbYoSjqak,Useful component,Extremely useful
+R_1PTSMjwbYoSjqak,Largest influence,Overall Summary
+R_1PTSMjwbYoSjqak,Use Case,"As a first-pass screening tool to identify potential fairness concerns before manual review.,As a decision-support tool to assist developers in evaluating fairness concerns while making the final judgment themselves.,As a second opinion to verify my own assessment after I have reviewed the code.,As an educational tool to help developers learn about fairness issues in code."
+R_1PTSMjwbYoSjqak,Understanding reason,The report clearly highlighted proxy variables and implicit biases that I might have overlooked during a standard code review
+R_1PTSMjwbYoSjqak,Feedback,The structured breakdown of bias types is very helpful for developers
+R_4G6YTe3UY9CPdCM,Useful component,"Code snippet,Issue description,Impact reasoning"
+R_4G6YTe3UY9CPdCM,Non-useful component,"Biased category,Overall Summary"
+R_4G6YTe3UY9CPdCM,Largest influence,"Issue description,Impact reasoning"
+R_4G6YTe3UY9CPdCM,Use Case,"As a first-pass screening tool to identify potential fairness concerns before manual review.,As a decision-support tool to assist developers in evaluating fairness concerns while making the final judgment themselves.,As a second opinion to verify my own assessment after I have reviewed the code.,Only for code involving decisions about people (e.g., hiring, lending, healthcare, education).,As an educational tool to help developers learn about fairness issues in code."
+R_4G6YTe3UY9CPdCM,Understanding reason,"in some cases, it helped me identify the meaning intended by the function. if a function was ambiguous in it's process of determining (eg. organisation_fit), then it helped me see that there was a possibility that the code was not fair, and that it could imply a certain biased pattern. this helped me understand that maybe the strictness of the logic or the naming of the variable caused fairness concerns more than I had evaluated, but reasonably so."
+R_4G6YTe3UY9CPdCM,Feedback,"I think as a developer it was more natural for me to read directly the code explanation of the issue rather than go through all the other sections of the report. another comment would be that if this is implemented in a coding environment, I would recommend that the words or variables that could cause un-fairness to the code's review, should be highlighted or marked in some way (for instance, L4 is identified, but ""market_identity"" is highlighted or returned in red/yellow/etc). Another comment would be that this should also be tested on larger systems (which I expect it is), but for instance ""leadership_style_match"" was very ambiguous in how it is being evaluated and as such I found it hard to definitively say ""yes it's biased""/ ""no it's not biased"", since I didn't know the mechanism that determined the result. so it could be also useful to see possible reasonings for the underlying mechanisms in more complex examples."
+R_9jqyq2NtIyj4VJm,Useful component,"Biased category,Protected attribute,Issue description,Impact reasoning"
+R_9jqyq2NtIyj4VJm,Largest influence,Protected attribute
+R_9jqyq2NtIyj4VJm,Use Case,"As a second opinion to verify my own assessment after I have reviewed the code.,As an educational tool to help developers learn about fairness issues in code."
+R_3a1m3uS6wLHBSSd,Useful component,"Issue description,Impact reasoning"
+R_3a1m3uS6wLHBSSd,Non-useful component,Biased category
+R_3a1m3uS6wLHBSSd,Largest influence,"Issue description,Impact reasoning"
+R_3a1m3uS6wLHBSSd,Use Case,"As a decision-support tool to assist developers in evaluating fairness concerns while making the final judgment themselves.,As a second opinion to verify my own assessment after I have reviewed the code."
+R_3a1m3uS6wLHBSSd,Understanding reason,"Most of the reports confirmed my assessment. However, the explanation in the report is much better than mine."

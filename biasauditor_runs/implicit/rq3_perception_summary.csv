@@ -1,0 +1,6 @@
+measure,column_found,n,mean,sd,median,q1,q3,response_distribution
+perceived_usefulness,True,11,4.363636363636363,1.2060453783110545,5.0,4.0,5.0,"{'Strongly agree': 7, 'Somewhat agree': 3, 'Strongly disagree': 1}"
+trust,True,11,4.181818181818182,1.1677484162422846,4.0,4.0,5.0,"{'Strongly agree': 5, 'Somewhat agree': 5, 'Strongly disagree': 1}"
+transparency,True,11,4.2727272727272725,1.4206272622267315,5.0,4.5,5.0,"{'Strongly agree': 8, 'Strongly disagree': 1, 'Somewhat disagree': 1, 'Somewhat agree': 1}"
+actionability,True,11,3.5454545454545454,1.5075567228888183,4.0,3.0,5.0,"{'Strongly agree': 4, 'Neither agree nor disagree': 3, 'Strongly disagree': 2, 'Somewhat agree': 2}"
+future_adoption,True,11,4.181818181818182,1.4012980994907414,5.0,4.0,5.0,"{'Strongly agree': 7, 'Somewhat agree': 2, 'Strongly disagree': 1, 'Somewhat disagree': 1}"
