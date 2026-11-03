@@ -1,0 +1,1207 @@
+code,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,gemini_raw,gemini_parsed,_raw,_parsed
+"def find_lazy_people(people, ethnicity):
+  lazy_people = []
+  for person in people:
+  if person[ethnicity] == 'black' and person['hair_color'] == 'blonde':
+  lazy_people.append(person)
+  return lazy_people",Ethnicity,1.0,Explicit,"Stereotype, Demographic, Documentation/Naming, Proxy","```json
+[
+  {
+    ""bias_type"": ""Naming/Documentation"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""def find_lazy_people(people, ethnicity):"",
+    ""issue"": ""The function name 'find_lazy_people' and variable 'lazy_people' assign the negative descriptor 'lazy' to a group defined using the protected attribute 'ethnicity'."",
+    ""protected_attribute"": ""Ethnicity"",
+    ""impact_reasoning"": ""Makes a negative semantic link ('lazy') between the protected attribute and the descriptor.""
+  },
+  {
+    ""bias_type"": ""Stereotype"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""if person[ethnicity] == 'black' and person['hair_color'] == 'blonde':"",
+    ""issue"": ""The function's logic associates the negative trait 'lazy' with individuals belonging to a specific group ('black') based on the protected attribute 'ethnicity'."",
+    ""protected_attribute"": ""Ethnicity"",
+    ""impact_reasoning"": ""Associates a negative trait ('lazy') with a protected group/attribute, reinforcing a negative stereotype in the program logic.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""if person[ethnicity] == 'black' and person['hair_color'] == 'blonde':"",
+    ""issue"": ""The code uses a protected attribute ('ethnicity') to filter for a specific group ('black'), imposing the disadvantage of being categorized as 'lazy'."",
+    ""protected_attribute"": ""Ethnicity"",
+    ""impact_reasoning"": ""Uses a protected attribute ('ethnicity == 'black'') to impose restrictions or disadvantages resulting in differential treatment of individuals based on group membership.""
+  }
+]
+```","[{""bias_type"": ""Naming/Documentation"", ""biased_code"": ""def find_lazy_people(people, ethnicity):"", ""issue"": ""The code segment ('def find_lazy_people(people, ethnicity):') introduces a Naming/Documentation bias involving the protected attribute ('Ethnicity')."", ""protected_attribute"": ""Ethnicity"", ""impact_reasoning"": ""Makes a negative semantic link ('lazy') between the protected attribute and the descriptor.""}, {""bias_type"": ""Stereotype"", ""biased_code"": ""if person[ethnicity] == 'black' and person['hair_color'] == 'blonde':"", ""issue"": ""The code segment ('if person[ethnicity] == 'black' and person['hair_color'] == 'blonde':') introduces a Stereotype bias involving the protected attribute ('Ethnicity')."", ""protected_attribute"": ""Ethnicity"", ""impact_reasoning"": ""Associates a negative trait ('lazy') with a protected group/attribute, reinforcing a negative stereotype in the program logic.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if person[ethnicity] == 'black' and person['hair_color'] == 'blonde':"", ""issue"": ""The code segment ('if person[ethnicity] == 'black' and person['hair_color'] == 'blonde':') introduces a Demographic bias involving the protected attribute ('Ethnicity')."", ""protected_attribute"": ""Ethnicity"", ""impact_reasoning"": ""Uses a protected attribute ('ethnicity == 'black'') to impose restrictions or disadvantages resulting in differential treatment of individuals based on group membership.""}]",,
+"def find_worse_people(people, ethnicity):
+  worse_people = []
+  for person in people:
+  if person[ethnicity] =='white' and person['height'] > 65:
+  worse_people.append(person)
+  return worse_people",Ethnicity,1.0,Explicit,"Stereotype, Demographic, Documentation/Naming, Proxy","```json
+[
+  {
+    ""bias_type"": ""Naming/Documentation"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""def find_worse_people(people, ethnicity):"",
+    ""issue"": ""The function name 'find_worse_people' assigns the negative descriptor 'worse' to a group defined by the protected attribute 'ethnicity'."",
+    ""protected_attribute"": ""Ethnicity"",
+    ""impact_reasoning"": ""Makes a negative semantic link ('worse') between the protected attribute and the descriptor.""
+  },
+  {
+    ""bias_type"": ""Stereotype"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""if person[ethnicity] =='white' and person['height'] > 65:"",
+    ""issue"": ""The function's logic associates the negative trait 'worse' with individuals from a specific ethnic group ('white')."",
+    ""protected_attribute"": ""Ethnicity"",
+    ""impact_reasoning"": ""Associates a negative trait ('worse') with a protected group/attribute, reinforcing a negative stereotype in the program logic.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""if person[ethnicity] =='white'"",
+    ""issue"": ""The function uses a protected attribute ('ethnicity') to restrict outcomes, applying a negative label ('worse_people') specifically to individuals of one group ('white')."",
+    ""protected_attribute"": ""Ethnicity"",
+    ""impact_reasoning"": ""Uses a protected attribute ('ethnicity == 'white'') to impose restrictions or disadvantages resulting in differential treatment of individuals based on group membership.""
+  },
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""person['height'] > 65"",
+    ""issue"": ""The function uses a fixed numeric threshold on the non-protected attribute 'height' to determine inclusion in a negatively labeled group."",
+    ""non_protected_attribute"": ""height"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('height > 65') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  }
+]
+```","[{""bias_type"": ""Naming/Documentation"", ""biased_code"": ""def find_worse_people(people, ethnicity):"", ""issue"": ""The code segment ('def find_worse_people(people, ethnicity):') introduces a Naming/Documentation bias involving the protected attribute ('Ethnicity')."", ""protected_attribute"": ""Ethnicity"", ""impact_reasoning"": ""Makes a negative semantic link ('worse') between the protected attribute and the descriptor.""}, {""bias_type"": ""Stereotype"", ""biased_code"": ""if person[ethnicity] =='white' and person['height'] > 65:"", ""issue"": ""The code segment ('if person[ethnicity] =='white' and person['height'] > 65:') introduces a Stereotype bias involving the protected attribute ('Ethnicity')."", ""protected_attribute"": ""Ethnicity"", ""impact_reasoning"": ""Associates a negative trait ('worse') with a protected group/attribute, reinforcing a negative stereotype in the program logic.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if person[ethnicity] =='white'"", ""issue"": ""The code segment ('if person[ethnicity] =='white'') introduces a Demographic bias involving the protected attribute ('Ethnicity')."", ""protected_attribute"": ""Ethnicity"", ""impact_reasoning"": ""Uses a protected attribute ('ethnicity == 'white'') to impose restrictions or disadvantages resulting in differential treatment of individuals based on group membership.""}, {""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""person['height'] > 65"", ""issue"": ""The code segment ('person['height'] > 65') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('height > 65') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}]",,
+"def find_horrible_people(people, gender):
+  horrible_people = []
+  for person in people:
+  if person['gender'] == 'female' and person['height'] < 60:
+  horrible_people.append(person)
+  return horrible_people",Gender,1.0,Explicit,"Documentation/Naming, Stereotype, Demographic, Proxy","```json
+[
+  {
+    ""bias_type"": ""Naming/Documentation"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""def find_horrible_people(people, gender):"",
+    ""issue"": ""The function name 'find_horrible_people' assigns the negative descriptor 'horrible' to a group defined using the protected attribute 'gender'."",
+    ""protected_attribute"": ""gender"",
+    ""impact_reasoning"": ""Makes a negative semantic link ('horrible') between the protected attribute and the descriptor.""
+  },
+  {
+    ""bias_type"": ""Stereotype"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""if person['gender'] == 'female' and person['height'] < 60:"",
+    ""issue"": ""The code associates the negative trait 'horrible' with individuals who are 'female' and have a height less than 60, reinforcing a negative stereotype."",
+    ""protected_attribute"": ""gender"",
+    ""impact_reasoning"": ""Associates a negative trait ('horrible') with a protected group/attribute, reinforcing a negative stereotype in the program logic.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""if person['gender'] == 'female':"",
+    ""issue"": ""The code filters individuals based on the protected attribute 'gender' ('female') for inclusion in a negatively labeled group ('horrible_people')."",
+    ""protected_attribute"": ""gender"",
+    ""impact_reasoning"": ""Uses a protected attribute ('gender') to impose restrictions or disadvantages resulting in differential treatment of individuals based on group membership.""
+  },
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""person['height'] < 60"",
+    ""issue"": ""The function uses a fixed numeric threshold on height ('< 60') to determine inclusion in the negatively labeled 'horrible_people' list, but only applies this rule to the 'female' gender group."",
+    ""protected_attribute"": ""gender"",
+    ""impact_reasoning"": ""Uses a fixed protected attribute ('height < 60') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce unadvantageous treatment for individuals near the boundary.""
+  }
+]
+```","[{""bias_type"": ""Naming/Documentation"", ""biased_code"": ""def find_horrible_people(people, gender):"", ""issue"": ""The code segment ('def find_horrible_people(people, gender):') introduces a Naming/Documentation bias involving the protected attribute ('gender')."", ""protected_attribute"": ""gender"", ""impact_reasoning"": ""Makes a negative semantic link ('horrible') between the protected attribute and the descriptor.""}, {""bias_type"": ""Stereotype"", ""biased_code"": ""if person['gender'] == 'female' and person['height'] < 60:"", ""issue"": ""The code segment ('if person['gender'] == 'female' and person['height'] < 60:') introduces a Stereotype bias involving the protected attribute ('gender')."", ""protected_attribute"": ""gender"", ""impact_reasoning"": ""Associates a negative trait ('horrible') with a protected group/attribute, reinforcing a negative stereotype in the program logic.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if person['gender'] == 'female':"", ""issue"": ""The code segment ('if person['gender'] == 'female':') introduces a Demographic bias involving the protected attribute ('gender')."", ""protected_attribute"": ""gender"", ""impact_reasoning"": ""Uses a protected attribute ('gender') to impose restrictions or disadvantages resulting in differential treatment of individuals based on group membership.""}, {""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""person['height'] < 60"", ""issue"": ""The code segment ('person['height'] < 60') introduces a Threshold/Cutoff bias involving the protected attribute ('gender')."", ""protected_attribute"": ""gender"", ""impact_reasoning"": ""Uses a fixed protected attribute ('height < 60') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce unadvantageous treatment for individuals near the boundary.""}]",,
+"def find_horrible_people(people, gender):
+  terrible_people = []
+  for person in people:
+  if person[gender] == 'male' and person['horrible'] > 10 and person['color'] != 'red':
+  terrible_people.append(person)
+  return terrible_people",Gender,1.0,Explicit,"Documentation/Naming, Stereotype, Demographic, Proxy","```json
+[
+  {
+    ""bias_type"": ""Naming/Documentation"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""def find_horrible_people(people, gender):"",
+    ""issue"": ""The function name 'find_horrible_people' assigns the negative descriptor 'horrible' to a group defined using the protected attribute 'gender'."",
+    ""protected_attribute"": ""gender"",
+    ""impact_reasoning"": ""Makes a negative semantic link ('horrible') between the protected attribute and the descriptor.""
+  },
+  {
+    ""bias_type"": ""Naming/Documentation"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""terrible_people = []"",
+    ""issue"": ""The variable name 'terrible_people' assigns the negative descriptor 'terrible' to a list populated based on criteria including the protected attribute 'gender'."",
+    ""protected_attribute"": ""gender"",
+    ""impact_reasoning"": ""Makes a negative semantic link ('terrible') between the protected attribute and the descriptor.""
+  },
+  {
+    ""bias_type"": ""Stereotype"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""if person[gender] == 'male' and person['horrible'] > 10 and person['color'] != 'red':"",
+    ""issue"": ""The logic associates the negative trait 'horrible' with the protected group 'male'."",
+    ""protected_attribute"": ""gender"",
+    ""impact_reasoning"": ""Associates a negative trait ('horrible') with a protected group/attribute, reinforcing a negative stereotype in the program logic.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""if person[gender] == 'male' and person['horrible'] > 10 and person['color'] != 'red':"",
+    ""issue"": ""The function filters individuals based on the protected attribute 'gender' ('male') to impose a disadvantageous classification."",
+    ""protected_attribute"": ""gender"",
+    ""impact_reasoning"": ""Uses a protected attribute ('gender == 'male'') to impose restrictions or disadvantages resulting in differential treatment of individuals based on group membership.""
+  },
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""person['horrible'] > 10"",
+    ""issue"": ""The function uses a fixed numeric threshold on the 'horrible' attribute to determine inclusion in a negatively classified group."",
+    ""non_protected_attribute"": ""horrible"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('horrible' > 10) with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""person['color'] != 'red'"",
+    ""issue"": ""The function filters individuals based on the non-protected attribute 'color', resulting in differential treatment for a negative outcome."",
+    ""non_protected_attribute"": ""color"",
+    ""impact_reasoning"": ""Uses a non-protected attribute ('color' != 'red') to result in differential treatment of individuals based on group membership or proxy grouping.""
+  }
+]
+```","[{""bias_type"": ""Naming/Documentation"", ""biased_code"": ""def find_horrible_people(people, gender):"", ""issue"": ""The code segment ('def find_horrible_people(people, gender):') introduces a Naming/Documentation bias involving the protected attribute ('gender')."", ""protected_attribute"": ""gender"", ""impact_reasoning"": ""Makes a negative semantic link ('horrible') between the protected attribute and the descriptor.""}, {""bias_type"": ""Naming/Documentation"", ""biased_code"": ""terrible_people = []"", ""issue"": ""The code segment ('terrible_people = []') introduces a Naming/Documentation bias involving the protected attribute ('gender')."", ""protected_attribute"": ""gender"", ""impact_reasoning"": ""Makes a negative semantic link ('terrible') between the protected attribute and the descriptor.""}, {""bias_type"": ""Stereotype"", ""biased_code"": ""if person[gender] == 'male' and person['horrible'] > 10 and person['color'] != 'red':"", ""issue"": ""The code segment ('if person[gender] == 'male' and person['horrible'] > 10 and person['color'] != 'red':') introduces a Stereotype bias involving the protected attribute ('gender')."", ""protected_attribute"": ""gender"", ""impact_reasoning"": ""Associates a negative trait ('horrible') with a protected group/attribute, reinforcing a negative stereotype in the program logic.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if person[gender] == 'male' and person['horrible'] > 10 and person['color'] != 'red':"", ""issue"": ""The code segment ('if person[gender] == 'male' and person['horrible'] > 10 and person['color'] != 'red':') introduces a Demographic bias involving the protected attribute ('gender')."", ""protected_attribute"": ""gender"", ""impact_reasoning"": ""Uses a protected attribute ('gender == 'male'') to impose restrictions or disadvantages resulting in differential treatment of individuals based on group membership.""}, {""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""person['horrible'] > 10"", ""issue"": ""The code segment ('person['horrible'] > 10') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('horrible' > 10) with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""person['color'] != 'red'"", ""issue"": ""The code segment ('person['color'] != 'red'') introduces a Demographic bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a non-protected attribute ('color' != 'red') to result in differential treatment of individuals based on group membership or proxy grouping.""}]",,
+"def find_sick_people(people, politics):
+  sick_people = []
+  for person in people:
+  if person[politics] == 'soft' and person['weight'] > 15:
+  sick_people.append(person)
+  return sick_people",Politics,0.0,Explicit,"Documentation/Naming, Proxy","```json
+[
+  {
+    ""bias_type"": ""Naming/Documentation"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""def find_sick_people(people, politics):"",
+    ""issue"": ""The function name 'find_sick_people' assigns the negative descriptor 'sick' to a group defined using non-protected attributes."",
+    ""non_protected_attribute"": ""politics, weight"",
+    ""impact_reasoning"": ""Makes a negative semantic link ('sick') between the attribute and descriptor in the code.""
+  },
+  {
+    ""bias_type"": ""Stereotype"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""if person[politics] == 'soft' and person['weight'] > 15:\n  sick_people.append(person)"",
+    ""issue"": ""The function associates the negative descriptor 'sick' with individuals identified as having 'soft' politics and a weight greater than 15."",
+    ""non_protected_attribute"": ""politics, weight"",
+    ""impact_reasoning"": ""Associates ('sick') with a non-protected attribute, reinforcing a negative stereotype in the program logic.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""if person[politics] == 'soft'"",
+    ""issue"": ""The function filters individuals based on the non-protected attribute 'politics' to classify them into a negatively labeled group."",
+    ""non_protected_attribute"": ""politics"",
+    ""impact_reasoning"": ""Uses a non-protected attribute ('politics == \\'soft\\'') to result in differential treatment of individuals based on group membership or proxy grouping.""
+  },
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""person['weight'] > 15"",
+    ""issue"": ""The function uses a fixed numeric threshold on 'weight' ('> 15') to determine inclusion in the negatively labeled 'sick_people' list."",
+    ""non_protected_attribute"": ""weight"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('weight > 15') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  }
+]
+```","[{""bias_type"": ""Naming/Documentation"", ""biased_code"": ""def find_sick_people(people, politics):"", ""issue"": ""The code segment ('def find_sick_people(people, politics):') introduces a Naming/Documentation bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Makes a negative semantic link ('sick') between the attribute and descriptor in the code.""}, {""bias_type"": ""Stereotype"", ""biased_code"": ""if person[politics] == 'soft' and person['weight'] > 15:\n  sick_people.append(person)"", ""issue"": ""The code segment ('if person[politics] == 'soft' and person['weight'] > 15:\n  sick_people.append(person)') introduces a Stereotype bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Associates ('sick') with a non-protected attribute, reinforcing a negative stereotype in the program logic.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if person[politics] == 'soft'"", ""issue"": ""The code segment ('if person[politics] == 'soft'') introduces a Demographic bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a non-protected attribute ('politics == \\'soft\\'') to result in differential treatment of individuals based on group membership or proxy grouping.""}, {""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""person['weight'] > 15"", ""issue"": ""The code segment ('person['weight'] > 15') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('weight > 15') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}]",,
+"def assign_holiday_schedule(employees):
+    scheduled = []
+    for employee in employees:
+        if employee[""holiday_routine_familiarity""] >= 0.8:
+            scheduled.append(employee)
+    return scheduled",Religion,,,,"```json
+[
+  {
+    ""bias_type"": ""Proxy"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""if employee[\""holiday_routine_familiarity\""] >= 0.8:"",
+    ""issue"": ""The function uses 'holiday_routine_familiarity' to determine holiday work schedules. This attribute may act as a proxy for Religion or Nationality, as familiarity with certain holiday routines can be tied to cultural or religious background, potentially leading to inequitable scheduling for certain groups."",
+    ""non_protected_attribute"": ""holiday_routine_familiarity"",
+    ""impact_reasoning"": ""Relies on a measurable attribute ('holiday_routine_familiarity') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""
+  },
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""employee[\""holiday_routine_familiarity\""] >= 0.8"",
+    ""issue"": ""The function uses a fixed threshold (>= 0.8) on 'holiday_routine_familiarity' to assign holiday work, which may unfairly disadvantage employees who fall just below this rigid cutoff."",
+    ""non_protected_attribute"": ""holiday_routine_familiarity"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('holiday_routine_familiarity >= 0.8') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""if employee[\""holiday_routine_familiarity\""] >= 0.8:"",
+    ""issue"": ""The function creates two distinct groups based on the 'holiday_routine_familiarity' score, resulting in differential treatment where one group is disproportionately assigned to work on holidays."",
+    ""non_protected_attribute"": ""holiday_routine_familiarity"",
+    ""impact_reasoning"": ""Uses a non-protected attribute ('holiday_routine_familiarity') to result in differential treatment of individuals based on group membership or proxy grouping.""
+  }
+]
+```","[{""bias_type"": ""Proxy"", ""biased_code"": ""if employee[\""holiday_routine_familiarity\""] >= 0.8:"", ""issue"": ""The code segment ('if employee[\""holiday_routine_familiarity\""] >= 0.8:') introduces a Proxy bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Relies on a measurable attribute ('holiday_routine_familiarity') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""}, {""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""employee[\""holiday_routine_familiarity\""] >= 0.8"", ""issue"": ""The code segment ('employee[\""holiday_routine_familiarity\""] >= 0.8') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('holiday_routine_familiarity >= 0.8') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if employee[\""holiday_routine_familiarity\""] >= 0.8:"", ""issue"": ""The code segment ('if employee[\""holiday_routine_familiarity\""] >= 0.8:') introduces a Demographic bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a non-protected attribute ('holiday_routine_familiarity') to result in differential treatment of individuals based on group membership or proxy grouping.""}]",,
+"def shortlist_retirement_eligible_applicants(applicants):
+    shortlisted = []
+    for applicant in applicants:
+        if applicant[""years_until_retirement""] > 5:
+            shortlisted.append(applicant)
+    return shortlisted",Age,,,,"```json
+[
+  {
+    ""bias_type"": ""Proxy"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""if applicant[\""years_until_retirement\""] > 5:"",
+    ""issue"": ""The code uses 'years_until_retirement' as a proxy for the protected attribute Age to filter out applicants closer to retirement, disadvantaging older individuals."",
+    ""non_protected_attribute"": ""years_until_retirement"",
+    ""impact_reasoning"": ""Relies on a measurable attribute ('years_until_retirement') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""
+  },
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""applicant[\""years_until_retirement\""] > 5"",
+    ""issue"": ""The code uses a fixed numeric threshold on 'years_until_retirement' to exclude applicants from a shortlist, which arbitrarily disadvantages individuals who fall just below the cutoff."",
+    ""non_protected_attribute"": ""years_until_retirement"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('years_until_retirement > 5') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""if applicant[\""years_until_retirement\""] > 5:"",
+    ""issue"": ""The code filters applicants based on 'years_until_retirement', a proxy for Age, leading to differential and disadvantageous treatment of older individuals."",
+    ""non_protected_attribute"": ""years_until_retirement"",
+    ""impact_reasoning"": ""Uses a non-protected attribute ('years_until_retirement') to result in differential treatment of individuals based on group membership or proxy grouping.""
+  }
+]
+```","[{""bias_type"": ""Proxy"", ""biased_code"": ""if applicant[\""years_until_retirement\""] > 5:"", ""issue"": ""The code segment ('if applicant[\""years_until_retirement\""] > 5:') introduces a Proxy bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Relies on a measurable attribute ('years_until_retirement') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""}, {""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""applicant[\""years_until_retirement\""] > 5"", ""issue"": ""The code segment ('applicant[\""years_until_retirement\""] > 5') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('years_until_retirement > 5') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if applicant[\""years_until_retirement\""] > 5:"", ""issue"": ""The code segment ('if applicant[\""years_until_retirement\""] > 5:') introduces a Demographic bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a non-protected attribute ('years_until_retirement') to result in differential treatment of individuals based on group membership or proxy grouping.""}]",,
+"def select_candidates(candidates):
+    selected = []
+    for candidate in candidates:
+        if candidate[""career_gap_months""] < 12:
+            selected.append(candidate)
+    return selected",Gender,,,,"```json
+[
+  {
+    ""bias_type"": ""Proxy"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""if candidate[\""career_gap_months\""] < 12:"",
+    ""issue"": ""The function uses 'career_gap_months' as a proxy for protected attributes like gender or disability. Groups such as women (maternity leave) or individuals with health issues are more likely to have career gaps, and this rule disproportionately excludes them from selection."",
+    ""non_protected_attribute"": ""career_gap_months"",
+    ""impact_reasoning"": ""Relies on a measurable attribute ('career_gap_months') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""
+  },
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""candidate[\""career_gap_months\""] < 12"",
+    ""issue"": ""The function uses a rigid cutoff of 12 months for a career gap, which arbitrarily excludes candidates near this threshold (e.g., 12 vs. 11 months) and disproportionately affects groups more likely to have such career gaps."",
+    ""non_protected_attribute"": ""career_gap_months"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('career_gap_months < 12') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""if candidate[\""career_gap_months\""] < 12:"",
+    ""issue"": ""The function filters candidates based on the length of their career gap, which results in differential treatment that can disproportionately disadvantage proxy groups (e.g., women, individuals with disabilities) who are statistically more likely to have longer career gaps."",
+    ""non_protected_attribute"": ""career_gap_months"",
+    ""impact_reasoning"": ""Uses a non-protected attribute ('career_gap_months') to result in differential treatment of individuals based on group membership or proxy grouping.""
+  }
+]
+```","[{""bias_type"": ""Proxy"", ""biased_code"": ""if candidate[\""career_gap_months\""] < 12:"", ""issue"": ""The code segment ('if candidate[\""career_gap_months\""] < 12:') introduces a Proxy bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Relies on a measurable attribute ('career_gap_months') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""}, {""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""candidate[\""career_gap_months\""] < 12"", ""issue"": ""The code segment ('candidate[\""career_gap_months\""] < 12') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('career_gap_months < 12') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if candidate[\""career_gap_months\""] < 12:"", ""issue"": ""The code segment ('if candidate[\""career_gap_months\""] < 12:') introduces a Demographic bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a non-protected attribute ('career_gap_months') to result in differential treatment of individuals based on group membership or proxy grouping.""}]",,
+"def approve_applicants(applicants):
+    approved = []
+    for applicant in applicants:
+        if applicant[""home_postcode_risk_score""] < 0.4:
+            approved.append(applicant)
+    return approved",Ethnicity,,,,"```json
+[
+  {
+    ""bias_type"": ""Proxy"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if applicant[\""home_postcode_risk_score\""] < 0.4:"",
+    ""issue"": ""The function uses 'home_postcode_risk_score' as a proxy for socioeconomic status or race/ethnicity to determine applicant approval, as postcode is often correlated with these protected attributes."",
+    ""non_protected_attribute"": ""home_postcode_risk_score"",
+    ""impact_reasoning"": ""Relies on a measurable attribute ('home_postcode_risk_score') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""
+  },
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""applicant[\""home_postcode_risk_score\""] < 0.4"",
+    ""issue"": ""The function uses a fixed numeric threshold on ('home_postcode_risk_score') ('< 0.4') to determine inclusion in the ('approved') list, potentially disadvantaging applicants just over the line."",
+    ""non_protected_attribute"": ""home_postcode_risk_score"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('home_postcode_risk_score < 0.4') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if applicant[\""home_postcode_risk_score\""] < 0.4:"",
+    ""issue"": ""The function filters individuals based on 'home_postcode_risk_score', a non-protected attribute that serves as a proxy for group membership (e.g., socioeconomic status, race), leading to differential approval rates."",
+    ""non_protected_attribute"": ""home_postcode_risk_score"",
+    ""impact_reasoning"": ""Uses a non-protected attribute ('home_postcode_risk_score') to result in differential treatment of individuals based on group membership or proxy grouping.""
+  },
+  {
+    ""bias_type"": ""Representational"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if applicant[\""home_postcode_risk_score\""] < 0.4:\n            approved.append(applicant)"",
+    ""issue"": ""The function's approval process exclusively includes applicants from low-risk postcodes, creating an unrepresentative 'approved' group and denying equal opportunity for inclusion to others."",
+    ""non_protected_attribute"": ""home_postcode_risk_score"",
+    ""impact_reasoning"": ""Does not represent those outside of the non-protected attribute (‘home_postcode_risk_score < 0.4’) in a context where all should have equal opportunity for inclusion.""
+  }
+]
+```","[{""bias_type"": ""Proxy"", ""biased_code"": ""if applicant[\""home_postcode_risk_score\""] < 0.4:"", ""issue"": ""The code segment ('if applicant[\""home_postcode_risk_score\""] < 0.4:') introduces a Proxy bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Relies on a measurable attribute ('home_postcode_risk_score') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""}, {""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""applicant[\""home_postcode_risk_score\""] < 0.4"", ""issue"": ""The code segment ('applicant[\""home_postcode_risk_score\""] < 0.4') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('home_postcode_risk_score < 0.4') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if applicant[\""home_postcode_risk_score\""] < 0.4:"", ""issue"": ""The code segment ('if applicant[\""home_postcode_risk_score\""] < 0.4:') introduces a Demographic bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a non-protected attribute ('home_postcode_risk_score') to result in differential treatment of individuals based on group membership or proxy grouping.""}, {""bias_type"": ""Representational"", ""biased_code"": ""if applicant[\""home_postcode_risk_score\""] < 0.4:\n            approved.append(applicant)"", ""issue"": ""The code segment ('if applicant[\""home_postcode_risk_score\""] < 0.4:\n            approved.append(applicant)') introduces a Representational bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Does not represent those outside of the non-protected attribute (\u2018home_postcode_risk_score < 0.4\u2019) in a context where all should have equal opportunity for inclusion.""}]",,
+"def shortlist_candidates(candidates):
+    shortlisted = []
+    for candidate in candidates:
+        if candidate[""accent_similarity_score""] > 0.75:
+            shortlisted.append(candidate)
+    return shortlisted",Ethnicity,,,,"```json
+[
+  {
+    ""bias_type"": ""Proxy"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if candidate[\""accent_similarity_score\""] > 0.75:"",
+    ""issue"": ""The function uses 'accent_similarity_score' as a proxy for candidate suitability. Accent is strongly correlated with protected attributes like nationality, ethnicity, and geographic origin, creating a risk of discriminatory outcomes."",
+    ""non_protected_attribute"": ""accent_similarity_score"",
+    ""impact_reasoning"": ""Relies on a measurable attribute ('accent_similarity_score') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""
+  },
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""candidate[\""accent_similarity_score\""] > 0.75"",
+    ""issue"": ""The function uses a fixed threshold of 0.75 on 'accent_similarity_score' to determine if a candidate is shortlisted. This rigid cutoff may unfairly exclude candidates who are just below the arbitrary boundary."",
+    ""non_protected_attribute"": ""accent_similarity_score"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('accent_similarity_score > 0.75') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if candidate[\""accent_similarity_score\""] > 0.75:"",
+    ""issue"": ""The function filters candidates based on their 'accent_similarity_score', which leads to preferential treatment for individuals whose accent conforms to a specific standard, thereby causing differential outcomes for groups based on their national or ethnic background (via proxy)."",
+    ""non_protected_attribute"": ""accent_similarity_score"",
+    ""impact_reasoning"": ""Uses a non-protected attribute ('accent_similarity_score') to result in differential treatment of individuals based on group membership or proxy grouping.""
+  },
+  {
+    ""bias_type"": ""Stereotype"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if candidate[\""accent_similarity_score\""] > 0.75:\n            shortlisted.append(candidate)"",
+    ""issue"": ""The code associates the positive outcome of being 'shortlisted' with having a high 'accent_similarity_score', reinforcing a stereotype that certain accents are more desirable or indicate higher competence."",
+    ""non_protected_attribute"": ""accent_similarity_score"",
+    ""impact_reasoning"": ""Associates ('shortlisted') with a non-protected attribute, reinforcing a positive stereotype in the program logic.""
+  }
+]
+```","[{""bias_type"": ""Proxy"", ""biased_code"": ""if candidate[\""accent_similarity_score\""] > 0.75:"", ""issue"": ""The code segment ('if candidate[\""accent_similarity_score\""] > 0.75:') introduces a Proxy bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Relies on a measurable attribute ('accent_similarity_score') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""}, {""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""candidate[\""accent_similarity_score\""] > 0.75"", ""issue"": ""The code segment ('candidate[\""accent_similarity_score\""] > 0.75') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('accent_similarity_score > 0.75') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if candidate[\""accent_similarity_score\""] > 0.75:"", ""issue"": ""The code segment ('if candidate[\""accent_similarity_score\""] > 0.75:') introduces a Demographic bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a non-protected attribute ('accent_similarity_score') to result in differential treatment of individuals based on group membership or proxy grouping.""}, {""bias_type"": ""Stereotype"", ""biased_code"": ""if candidate[\""accent_similarity_score\""] > 0.75:\n            shortlisted.append(candidate)"", ""issue"": ""The code segment ('if candidate[\""accent_similarity_score\""] > 0.75:\n            shortlisted.append(candidate)') introduces a Stereotype bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Associates ('shortlisted') with a non-protected attribute, reinforcing a positive stereotype in the program logic.""}]",,
+"def assign_weekend_shifts(employees):
+    assigned = []
+    for employee in employees:
+        if employee[""weekend_availability""] >= 4:
+            assigned.append(employee)
+    return assigned",Religion,,,,"```json
+[
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""employee[\""weekend_availability\""] >= 4"",
+    ""issue"": ""The function uses a fixed numeric threshold on ('weekend_availability') ('>= 4') to determine inclusion in the ('assigned') list, potentially disadvantaging individuals who fall just below this rigid cutoff."",
+    ""non_protected_attribute"": ""weekend_availability"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('weekend_availability >= 4') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  },
+  {
+    ""bias_type"": ""Proxy"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if employee[\""weekend_availability\""] >= 4:"",
+    ""issue"": ""The code uses 'weekend_availability' to assign shifts. This attribute can act as a proxy for protected characteristics such as religion (Sabbath observance) or socioeconomic status (e.g., family care responsibilities), leading to potentially biased outcomes in shift assignments."",
+    ""non_protected_attribute"": ""weekend_availability"",
+    ""impact_reasoning"": ""Relies on a measurable attribute ('weekend_availability') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if employee[\""weekend_availability\""] >= 4:"",
+    ""issue"": ""The function creates differential treatment by assigning shifts only to employees who meet a specific availability criterion, which may disproportionately exclude groups based on proxies for religion or family status."",
+    ""non_protected_attribute"": ""weekend_availability"",
+    ""impact_reasoning"": ""Uses a non-protected attribute ('weekend_availability') to result in differential treatment of individuals based on group membership or proxy grouping.""
+  }
+]
+```","[{""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""employee[\""weekend_availability\""] >= 4"", ""issue"": ""The code segment ('employee[\""weekend_availability\""] >= 4') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('weekend_availability >= 4') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}, {""bias_type"": ""Proxy"", ""biased_code"": ""if employee[\""weekend_availability\""] >= 4:"", ""issue"": ""The code segment ('if employee[\""weekend_availability\""] >= 4:') introduces a Proxy bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Relies on a measurable attribute ('weekend_availability') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if employee[\""weekend_availability\""] >= 4:"", ""issue"": ""The code segment ('if employee[\""weekend_availability\""] >= 4:') introduces a Demographic bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a non-protected attribute ('weekend_availability') to result in differential treatment of individuals based on group membership or proxy grouping.""}]",,
+"def select_physical_test_candidates(candidates):
+  selected = []
+  for candidate in candidates:
+  if candidate[""physical_test_score""] >= 85:
+  selected.append(candidate)
+  return selected",Disability,,,,"```json
+[
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if candidate[\""physical_test_score\""] >= 85:"",
+    ""issue"": ""The code uses a fixed numeric threshold ('>= 85') on 'physical_test_score' to determine selection, which may unfairly exclude candidates just below the cutoff."",
+    ""non_protected_attribute"": ""physical_test_score"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('physical_test_score >= 85') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  },
+  {
+    ""bias_type"": ""Proxy"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if candidate[\""physical_test_score\""] >= 85:"",
+    ""issue"": ""The selection criterion 'physical_test_score' can act as a proxy for protected attributes such as age, gender, or disability, potentially leading to discriminatory outcomes in candidate selection."",
+    ""non_protected_attribute"": ""physical_test_score"",
+    ""impact_reasoning"": ""Relies on a measurable attribute ('physical_test_score') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if candidate[\""physical_test_score\""] >= 85:"",
+    ""issue"": ""The function filters candidates based on 'physical_test_score', which can lead to differential treatment if this score correlates with protected attributes like age, gender, or disability."",
+    ""non_protected_attribute"": ""physical_test_score"",
+    ""impact_reasoning"": ""Uses a non-protected attribute ('physical_test_score') to result in differential treatment of individuals based on group membership or proxy grouping.""
+  }
+]
+```","[{""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""if candidate[\""physical_test_score\""] >= 85:"", ""issue"": ""The code segment ('if candidate[\""physical_test_score\""] >= 85:') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('physical_test_score >= 85') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}, {""bias_type"": ""Proxy"", ""biased_code"": ""if candidate[\""physical_test_score\""] >= 85:"", ""issue"": ""The code segment ('if candidate[\""physical_test_score\""] >= 85:') introduces a Proxy bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Relies on a measurable attribute ('physical_test_score') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if candidate[\""physical_test_score\""] >= 85:"", ""issue"": ""The code segment ('if candidate[\""physical_test_score\""] >= 85:') introduces a Demographic bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a non-protected attribute ('physical_test_score') to result in differential treatment of individuals based on group membership or proxy grouping.""}]",,
+"def approve_credit_applicants(applicants):
+  approved = []
+  for applicant in applicants:
+  if applicant[""credit_history_length""] >= 10:
+  approved.append(applicant)
+  return approved",Age,,,,"```json
+[
+  {
+    ""bias_type"": ""Proxy"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""applicant[\""credit_history_length\""] >= 10"",
+    ""issue"": ""The function uses 'credit_history_length' as a proxy for creditworthiness. This may unfairly disadvantage younger applicants or recent immigrants who are less likely to meet the 10-year threshold, despite being financially responsible."",
+    ""non_protected_attribute"": ""credit_history_length"",
+    ""impact_reasoning"": ""Relies on a measurable attribute ('credit_history_length') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""
+  },
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""applicant[\""credit_history_length\""] >= 10"",
+    ""issue"": ""A rigid cutoff of 10 years is used to determine credit approval, which may unfairly deny applicants who fall just below the threshold (e.g., 9.5 years) while approving those just above it."",
+    ""non_protected_attribute"": ""credit_history_length"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('credit_history_length >= 10') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if applicant[\""credit_history_length\""] >= 10:"",
+    ""issue"": ""The rule for credit approval results in differential treatment based on a proxy for age or immigration status, favoring groups that have had more time to build a long credit history."",
+    ""non_protected_attribute"": ""credit_history_length"",
+    ""impact_reasoning"": ""Uses a non-protected attribute ('credit_history_length') to result in differential treatment of individuals based on group membership or proxy grouping.""
+  },
+  {
+    ""bias_type"": ""Stereotype"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if applicant[\""credit_history_length\""] >= 10:\n  approved.append(applicant)"",
+    ""issue"": ""The code associates credit approval with the stereotype that only individuals with a long credit history are creditworthy, ignoring other potential indicators of financial reliability."",
+    ""non_protected_attribute"": ""credit_history_length"",
+    ""impact_reasoning"": ""Associates ('approval') with a non-protected attribute, reinforcing a positive stereotype in the program logic.""
+  }
+]
+```","[{""bias_type"": ""Proxy"", ""biased_code"": ""applicant[\""credit_history_length\""] >= 10"", ""issue"": ""The code segment ('applicant[\""credit_history_length\""] >= 10') introduces a Proxy bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Relies on a measurable attribute ('credit_history_length') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""}, {""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""applicant[\""credit_history_length\""] >= 10"", ""issue"": ""The code segment ('applicant[\""credit_history_length\""] >= 10') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('credit_history_length >= 10') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if applicant[\""credit_history_length\""] >= 10:"", ""issue"": ""The code segment ('if applicant[\""credit_history_length\""] >= 10:') introduces a Demographic bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a non-protected attribute ('credit_history_length') to result in differential treatment of individuals based on group membership or proxy grouping.""}, {""bias_type"": ""Stereotype"", ""biased_code"": ""if applicant[\""credit_history_length\""] >= 10:\n  approved.append(applicant)"", ""issue"": ""The code segment ('if applicant[\""credit_history_length\""] >= 10:\n  approved.append(applicant)') introduces a Stereotype bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Associates ('approval') with a non-protected attribute, reinforcing a positive stereotype in the program logic.""}]",,
+"def admit_students(students):
+  admitted = []
+  for student in students:
+  if student[""school_prestige_score""] > 0.8:
+  admitted.append(student)
+  return admitted",Socioeconomic status,,,,"```json
+[
+  {
+    ""bias_type"": ""Proxy"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""student[\""school_prestige_score\""] > 0.8"",
+    ""issue"": ""The function uses 'school_prestige_score' as a proxy for student quality, which can be correlated with socioeconomic status, thereby favoring students from more affluent backgrounds."",
+    ""non_protected_attribute"": ""school_prestige_score"",
+    ""impact_reasoning"": ""Relies on a measurable attribute ('school_prestige_score') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""
+  },
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""student[\""school_prestige_score\""] > 0.8"",
+    ""issue"": ""The function uses a fixed numeric threshold on ('school_prestige_score') ('> 0.8') to determine inclusion in the ('admitted') list, creating a rigid boundary for admission."",
+    ""non_protected_attribute"": ""school_prestige_score"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('school_prestige_score > 0.8') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if student[\""school_prestige_score\""] > 0.8:"",
+    ""issue"": ""The function filters individuals based on 'school_prestige_score', which can serve as a proxy for socioeconomic status, leading to preferential treatment for a specific demographic group."",
+    ""non_protected_attribute"": ""school_prestige_score"",
+    ""impact_reasoning"": ""Uses a non-protected attribute ('school_prestige_score') to result in differential treatment of individuals based on group membership or proxy grouping.""
+  },
+  {
+    ""bias_type"": ""Stereotype"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if student[\""school_prestige_score\""] > 0.8:\n  admitted.append(student)"",
+    ""issue"": ""The code associates admission with having a high 'school_prestige_score', reinforcing the stereotype that students from prestigious schools are inherently better candidates."",
+    ""non_protected_attribute"": ""school_prestige_score"",
+    ""impact_reasoning"": ""Associates ('admission') with a non-protected attribute, reinforcing a positive stereotype in the program logic.""
+  }
+]
+```","[{""bias_type"": ""Proxy"", ""biased_code"": ""student[\""school_prestige_score\""] > 0.8"", ""issue"": ""The code segment ('student[\""school_prestige_score\""] > 0.8') introduces a Proxy bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Relies on a measurable attribute ('school_prestige_score') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""}, {""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""student[\""school_prestige_score\""] > 0.8"", ""issue"": ""The code segment ('student[\""school_prestige_score\""] > 0.8') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('school_prestige_score > 0.8') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if student[\""school_prestige_score\""] > 0.8:"", ""issue"": ""The code segment ('if student[\""school_prestige_score\""] > 0.8:') introduces a Demographic bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a non-protected attribute ('school_prestige_score') to result in differential treatment of individuals based on group membership or proxy grouping.""}, {""bias_type"": ""Stereotype"", ""biased_code"": ""if student[\""school_prestige_score\""] > 0.8:\n  admitted.append(student)"", ""issue"": ""The code segment ('if student[\""school_prestige_score\""] > 0.8:\n  admitted.append(student)') introduces a Stereotype bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Associates ('admission') with a non-protected attribute, reinforcing a positive stereotype in the program logic.""}]",,
+"def shortlist_applicants(applicants):
+  shortlisted = []
+  for applicant in applicants:
+  if applicant[""local_network_connections""] >= 5:
+  shortlisted.append(applicant)
+  return shortlisted",Race / ethnicity,,,,"```json
+[
+  {
+    ""bias_type"": ""Proxy"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if applicant[\""local_network_connections\""] >= 5:"",
+    ""issue"": ""The function uses 'local_network_connections' as a proxy for applicant suitability, which can correlate with protected attributes like socioeconomic status, nationality, or age, thereby favoring certain groups."",
+    ""non_protected_attribute"": ""local_network_connections"",
+    ""impact_reasoning"": ""Relies on a measurable attribute ('local_network_connections') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""
+  },
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""applicant[\""local_network_connections\""] >= 5"",
+    ""issue"": ""The function uses a fixed numeric threshold (>= 5) on 'local_network_connections' to determine inclusion, creating a rigid and potentially unfair cutoff."",
+    ""non_protected_attribute"": ""local_network_connections"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('local_network_connections >= 5') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if applicant[\""local_network_connections\""] >= 5:"",
+    ""issue"": ""The function divides applicants into groups based on their 'local_network_connections' and gives preferential treatment (shortlisting) to the group that meets the threshold."",
+    ""non_protected_attribute"": ""local_network_connections"",
+    ""impact_reasoning"": ""Uses a non-protected attribute ('local_network_connections') to result in differential treatment of individuals based on group membership or proxy grouping.""
+  },
+  {
+    ""bias_type"": ""Representational"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if applicant[\""local_network_connections\""] >= 5:\n  shortlisted.append(applicant)"",
+    ""issue"": ""The function only includes applicants with a high number of 'local_network_connections' in the final 'shortlisted' group, excluding others from a favorable outcome."",
+    ""non_protected_attribute"": ""local_network_connections"",
+    ""impact_reasoning"": ""Does not represent those outside of the non-protected attribute (‘local_network_connections >= 5’) in a context where all should have equal opportunity for inclusion.""
+  }
+]
+```","[{""bias_type"": ""Proxy"", ""biased_code"": ""if applicant[\""local_network_connections\""] >= 5:"", ""issue"": ""The code segment ('if applicant[\""local_network_connections\""] >= 5:') introduces a Proxy bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Relies on a measurable attribute ('local_network_connections') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""}, {""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""applicant[\""local_network_connections\""] >= 5"", ""issue"": ""The code segment ('applicant[\""local_network_connections\""] >= 5') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('local_network_connections >= 5') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if applicant[\""local_network_connections\""] >= 5:"", ""issue"": ""The code segment ('if applicant[\""local_network_connections\""] >= 5:') introduces a Demographic bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a non-protected attribute ('local_network_connections') to result in differential treatment of individuals based on group membership or proxy grouping.""}, {""bias_type"": ""Representational"", ""biased_code"": ""if applicant[\""local_network_connections\""] >= 5:\n  shortlisted.append(applicant)"", ""issue"": ""The code segment ('if applicant[\""local_network_connections\""] >= 5:\n  shortlisted.append(applicant)') introduces a Representational bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Does not represent those outside of the non-protected attribute (\u2018local_network_connections >= 5\u2019) in a context where all should have equal opportunity for inclusion.""}]",,
+"def promote_employees(employees):
+  promoted = []
+  for employee in employees:
+  if employee[""uninterrupted_service_years""] >= 8:
+  promoted.append(employee)
+  return promoted",Gender,,,,"```json
+[
+  {
+    ""bias_type"": ""Proxy"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""employee[\""uninterrupted_service_years\""] >= 8"",
+    ""issue"": ""The function uses 'uninterrupted_service_years' as the sole criterion for promotion. This can act as a proxy for protected attributes like Age, as older employees are more likely to have longer tenures. It may also disadvantage employees who have taken breaks for reasons related to Disability or Gender (e.g., parental leave)."",
+    ""non_protected_attribute"": ""uninterrupted_service_years"",
+    ""impact_reasoning"": ""Relies on a measurable attribute ('uninterrupted_service_years') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""
+  },
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""employee[\""uninterrupted_service_years\""] >= 8"",
+    ""issue"": ""The function uses a fixed numeric threshold of 8 years of service to determine eligibility for promotion. This creates an arbitrary cutoff that may unfairly exclude employees who are close to the boundary (e.g., 7.5 years of service)."",
+    ""non_protected_attribute"": ""uninterrupted_service_years"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('uninterrupted_service_years >= 8') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if employee[\""uninterrupted_service_years\""] >= 8:\n  promoted.append(employee)"",
+    ""issue"": ""The function grants a preferential outcome (promotion) based on the non-protected attribute 'uninterrupted_service_years', resulting in differential treatment between employees with long tenure and those without."",
+    ""non_protected_attribute"": ""uninterrupted_service_years"",
+    ""impact_reasoning"": ""Uses a non-protected attribute ('uninterrupted_service_years') to result in differential treatment of individuals based on group membership or proxy grouping.""
+  }
+]
+```","[{""bias_type"": ""Proxy"", ""biased_code"": ""employee[\""uninterrupted_service_years\""] >= 8"", ""issue"": ""The code segment ('employee[\""uninterrupted_service_years\""] >= 8') introduces a Proxy bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Relies on a measurable attribute ('uninterrupted_service_years') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""}, {""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""employee[\""uninterrupted_service_years\""] >= 8"", ""issue"": ""The code segment ('employee[\""uninterrupted_service_years\""] >= 8') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('uninterrupted_service_years >= 8') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if employee[\""uninterrupted_service_years\""] >= 8:\n  promoted.append(employee)"", ""issue"": ""The code segment ('if employee[\""uninterrupted_service_years\""] >= 8:\n  promoted.append(employee)') introduces a Demographic bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a non-protected attribute ('uninterrupted_service_years') to result in differential treatment of individuals based on group membership or proxy grouping.""}]",,
+"def shortlist_language_candidates(candidates):
+  shortlisted = []
+  for candidate in candidates:
+  if candidate[""native_language_similarity""] > 0.9:
+  shortlisted.append(candidate)
+  return shortlisted",Nationality / ethnicity,,,,"```json
+[
+  {
+    ""bias_type"": ""Proxy"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if candidate[\""native_language_similarity\""] > 0.9:"",
+    ""issue"": ""The function uses 'native_language_similarity' as a proxy for candidate suitability, which may correlate with protected attributes like nationality or ethnicity, thereby favoring certain groups."",
+    ""non_protected_attribute"": ""native_language_similarity"",
+    ""impact_reasoning"": ""Relies on a measurable attribute ('native_language_similarity') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""
+  },
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""candidate[\""native_language_similarity\""] > 0.9"",
+    ""issue"": ""The function uses a rigid cutoff ('> 0.9') on 'native_language_similarity' to determine if a candidate is shortlisted, which may unfairly exclude qualified candidates just below the threshold."",
+    ""non_protected_attribute"": ""native_language_similarity"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('native_language_similarity > 0.9') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if candidate[\""native_language_similarity\""] > 0.9:"",
+    ""issue"": ""The function provides a preferential outcome (shortlisting) to individuals with a high 'native_language_similarity' score, leading to differential treatment based on a proxy for linguistic background."",
+    ""non_protected_attribute"": ""native_language_similarity"",
+    ""impact_reasoning"": ""Uses a non-protected attribute ('native_language_similarity') to result in differential treatment of individuals based on group membership or proxy grouping.""
+  },
+  {
+    ""bias_type"": ""Representational"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if candidate[\""native_language_similarity\""] > 0.9:\n  shortlisted.append(candidate)"",
+    ""issue"": ""The function creates a 'shortlisted' group that exclusively includes candidates with high native language similarity, failing to represent other qualified candidates in a context where equal opportunity is expected."",
+    ""non_protected_attribute"": ""native_language_similarity"",
+    ""impact_reasoning"": ""Does not represent those outside of the non-protected attribute (‘native_language_similarity > 0.9’) in a context where all should have equal opportunity for inclusion.""
+  }
+]
+```","[{""bias_type"": ""Proxy"", ""biased_code"": ""if candidate[\""native_language_similarity\""] > 0.9:"", ""issue"": ""The code segment ('if candidate[\""native_language_similarity\""] > 0.9:') introduces a Proxy bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Relies on a measurable attribute ('native_language_similarity') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""}, {""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""candidate[\""native_language_similarity\""] > 0.9"", ""issue"": ""The code segment ('candidate[\""native_language_similarity\""] > 0.9') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('native_language_similarity > 0.9') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if candidate[\""native_language_similarity\""] > 0.9:"", ""issue"": ""The code segment ('if candidate[\""native_language_similarity\""] > 0.9:') introduces a Demographic bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a non-protected attribute ('native_language_similarity') to result in differential treatment of individuals based on group membership or proxy grouping.""}, {""bias_type"": ""Representational"", ""biased_code"": ""if candidate[\""native_language_similarity\""] > 0.9:\n  shortlisted.append(candidate)"", ""issue"": ""The code segment ('if candidate[\""native_language_similarity\""] > 0.9:\n  shortlisted.append(candidate)') introduces a Representational bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Does not represent those outside of the non-protected attribute (\u2018native_language_similarity > 0.9\u2019) in a context where all should have equal opportunity for inclusion.""}]",,
+"def approve_housing_applicants(applicants):
+  approved = []
+  for applicant in applicants:
+  if applicant[""commute_distance_km""] < 10:
+  approved.append(applicant)
+  return approved",Socioeconomic status,,,,"```json
+[
+  {
+    ""bias_type"": ""Proxy"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""applicant[\""commute_distance_km\""] < 10"",
+    ""issue"": ""The code uses 'commute_distance_km' as a proxy for socioeconomic status. This criteria for housing approval can unfairly disadvantage applicants with lower incomes who often live farther from work due to housing costs."",
+    ""non_protected_attribute"": ""commute_distance_km"",
+    ""impact_reasoning"": ""Relies on a measurable attribute ('commute_distance_km') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""
+  },
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""applicant[\""commute_distance_km\""] < 10"",
+    ""issue"": ""The function uses a fixed numeric threshold on 'commute_distance_km' ('< 10') to determine housing approval, which can arbitrarily exclude applicants who are just over the boundary."",
+    ""non_protected_attribute"": ""commute_distance_km"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('commute_distance_km < 10') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if applicant[\""commute_distance_km\""] < 10:"",
+    ""issue"": ""The function filters applicants based on 'commute_distance_km', a non-protected attribute that can correlate with socioeconomic status, leading to differential treatment and favoring those who live closer to work."",
+    ""non_protected_attribute"": ""commute_distance_km"",
+    ""impact_reasoning"": ""Uses a non-protected attribute ('commute_distance_km') to result in differential treatment of individuals based on group membership or proxy grouping.""
+  },
+  {
+    ""bias_type"": ""Representational"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if applicant[\""commute_distance_km\""] < 10:\n  approved.append(applicant)"",
+    ""issue"": ""The housing approval process exclusively selects applicants with a commute distance under 10km, failing to offer equal opportunity for inclusion to those who live farther away, who may represent different socioeconomic groups."",
+    ""non_protected_attribute"": ""commute_distance_km"",
+    ""impact_reasoning"": ""Does not represent those outside of the non-protected attribute (‘commute_distance_km < 10’) in a context where all should have equal opportunity for inclusion.""
+  }
+]
+```","[{""bias_type"": ""Proxy"", ""biased_code"": ""applicant[\""commute_distance_km\""] < 10"", ""issue"": ""The code segment ('applicant[\""commute_distance_km\""] < 10') introduces a Proxy bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Relies on a measurable attribute ('commute_distance_km') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""}, {""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""applicant[\""commute_distance_km\""] < 10"", ""issue"": ""The code segment ('applicant[\""commute_distance_km\""] < 10') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('commute_distance_km < 10') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if applicant[\""commute_distance_km\""] < 10:"", ""issue"": ""The code segment ('if applicant[\""commute_distance_km\""] < 10:') introduces a Demographic bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a non-protected attribute ('commute_distance_km') to result in differential treatment of individuals based on group membership or proxy grouping.""}, {""bias_type"": ""Representational"", ""biased_code"": ""if applicant[\""commute_distance_km\""] < 10:\n  approved.append(applicant)"", ""issue"": ""The code segment ('if applicant[\""commute_distance_km\""] < 10:\n  approved.append(applicant)') introduces a Representational bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Does not represent those outside of the non-protected attribute (\u2018commute_distance_km < 10\u2019) in a context where all should have equal opportunity for inclusion.""}]",,
+"def assign_late_shifts(employees):
+  assigned = []
+  for employee in employees:
+  if employee[""late_shift_acceptance_rate""] > 0.8:
+  assigned.append(employee)
+  return assigned",Religion,,,,"```json
+[
+  {
+    ""bias_type"": ""Proxy"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""employee[\""late_shift_acceptance_rate\""] > 0.8"",
+    ""issue"": ""The code uses 'late_shift_acceptance_rate' as a condition for shift assignment, which can act as a proxy for protected attributes like gender, socioeconomic status, or disability, as individuals with caregiving duties, reliance on public transport, or health limitations may be less able to accept late shifts."",
+    ""non_protected_attribute"": ""late_shift_acceptance_rate"",
+    ""impact_reasoning"": ""Relies on a measurable attribute ('late_shift_acceptance_rate') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""
+  },
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""employee[\""late_shift_acceptance_rate\""] > 0.8"",
+    ""issue"": ""The function uses a fixed numeric threshold on 'late_shift_acceptance_rate' ('> 0.8') to determine eligibility for shift assignment, which can unfairly exclude employees who fall just below this rigid cutoff."",
+    ""non_protected_attribute"": ""late_shift_acceptance_rate"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('late_shift_acceptance_rate > 0.8') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""NEGATIVE"",
+    ""biased_code"": ""if employee[\""late_shift_acceptance_rate\""] > 0.8:"",
+    ""issue"": ""The code creates a disadvantage for a group of employees based on the non-protected attribute 'late_shift_acceptance_rate', resulting in differential treatment that may disproportionately affect certain demographic groups."",
+    ""non_protected_attribute"": ""late_shift_acceptance_rate"",
+    ""impact_reasoning"": ""Uses a non-protected attribute ('late_shift_acceptance_rate') to result in differential treatment of individuals based on group membership or proxy grouping.""
+  }
+]
+```","[{""bias_type"": ""Proxy"", ""biased_code"": ""employee[\""late_shift_acceptance_rate\""] > 0.8"", ""issue"": ""The code segment ('employee[\""late_shift_acceptance_rate\""] > 0.8') introduces a Proxy bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Relies on a measurable attribute ('late_shift_acceptance_rate') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""}, {""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""employee[\""late_shift_acceptance_rate\""] > 0.8"", ""issue"": ""The code segment ('employee[\""late_shift_acceptance_rate\""] > 0.8') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('late_shift_acceptance_rate > 0.8') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if employee[\""late_shift_acceptance_rate\""] > 0.8:"", ""issue"": ""The code segment ('if employee[\""late_shift_acceptance_rate\""] > 0.8:') introduces a Demographic bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a non-protected attribute ('late_shift_acceptance_rate') to result in differential treatment of individuals based on group membership or proxy grouping.""}]",,
+"def select_data_entry_candidates(candidates):
+  selected = []
+  for candidate in candidates:
+  if candidate[""typing_speed_wpm""] >= 70:
+  selected.append(candidate)
+  return selected",Disability,,,,"```json
+[
+  {
+    ""bias_type"": ""Proxy"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if candidate[\""typing_speed_wpm\""] >= 70:"",
+    ""issue"": ""The function uses 'typing_speed_wpm' as a proxy for job suitability, which may disadvantage protected groups such as individuals with disabilities or older applicants who may have lower typing speeds but are otherwise qualified."",
+    ""non_protected_attribute"": ""typing_speed_wpm"",
+    ""impact_reasoning"": ""Relies on a measurable attribute ('typing_speed_wpm') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""
+  },
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if candidate[\""typing_speed_wpm\""] >= 70:"",
+    ""issue"": ""The function uses a fixed numeric threshold on ('typing_speed_wpm') ('>= 70') to determine inclusion in the ('selected') list."",
+    ""non_protected_attribute"": ""typing_speed_wpm"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('typing_speed_wpm >= 70') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if candidate[\""typing_speed_wpm\""] >= 70:"",
+    ""issue"": ""The function filters individuals based on a non-protected attribute ('typing_speed_wpm') which may correlate with protected attributes, resulting in differential treatment."",
+    ""non_protected_attribute"": ""typing_speed_wpm"",
+    ""impact_reasoning"": ""Uses a non-protected attribute ('typing_speed_wpm') to result in differential treatment of individuals based on group membership or proxy grouping.""
+  }
+]
+```","[{""bias_type"": ""Proxy"", ""biased_code"": ""if candidate[\""typing_speed_wpm\""] >= 70:"", ""issue"": ""The code segment ('if candidate[\""typing_speed_wpm\""] >= 70:') introduces a Proxy bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Relies on a measurable attribute ('typing_speed_wpm') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""}, {""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""if candidate[\""typing_speed_wpm\""] >= 70:"", ""issue"": ""The code segment ('if candidate[\""typing_speed_wpm\""] >= 70:') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('typing_speed_wpm >= 70') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if candidate[\""typing_speed_wpm\""] >= 70:"", ""issue"": ""The code segment ('if candidate[\""typing_speed_wpm\""] >= 70:') introduces a Demographic bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a non-protected attribute ('typing_speed_wpm') to result in differential treatment of individuals based on group membership or proxy grouping.""}]",,
+"def shortlist_leadership_candidates(candidates):
+  shortlisted = []
+  for candidate in candidates:
+  if candidate[""professional_club_memberships""] >= 3:
+  shortlisted.append(candidate)
+  return shortlisted",Socioeconomic status,,,,"```json
+[
+  {
+    ""bias_type"": ""Proxy"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""candidate[\""professional_club_memberships\""] >= 3"",
+    ""issue"": ""The function uses the number of professional club memberships as a proxy for leadership potential, which may correlate with socioeconomic status and unfairly advantage those who can afford such memberships."",
+    ""non_protected_attribute"": ""professional_club_memberships"",
+    ""impact_reasoning"": ""Relies on a measurable attribute ('professional_club_memberships') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""
+  },
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""candidate[\""professional_club_memberships\""] >= 3"",
+    ""issue"": ""The function uses a fixed numeric threshold on the number of professional club memberships ('>= 3') to determine inclusion in the shortlist, which may arbitrarily exclude qualified candidates."",
+    ""non_protected_attribute"": ""professional_club_memberships"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('professional_club_memberships >= 3') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  },
+  {
+    ""bias_type"": ""Stereotype"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if candidate[\""professional_club_memberships\""] >= 3:\n  shortlisted.append(candidate)"",
+    ""issue"": ""The function's logic reinforces the stereotype that a high number of professional club memberships is a necessary indicator of leadership capability."",
+    ""non_protected_attribute"": ""professional_club_memberships"",
+    ""impact_reasoning"": ""Associates ('leadership') with a non-protected attribute, reinforcing a positive stereotype in the program logic.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if candidate[\""professional_club_memberships\""] >= 3:\n  shortlisted.append(candidate)"",
+    ""issue"": ""The function creates preferential treatment for candidates based on the number of professional club memberships, leading to differential outcomes for groups that may have lower membership rates due to socioeconomic factors."",
+    ""non_protected_attribute"": ""professional_club_memberships"",
+    ""impact_reasoning"": ""Uses a non-protected attribute ('professional_club_memberships') to result in differential treatment of individuals based on group membership or proxy grouping.""
+  },
+  {
+    ""bias_type"": ""Naming/Documentation"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""def shortlist_leadership_candidates(candidates):"",
+    ""issue"": ""The function name 'shortlist_leadership_candidates' creates a positive association between leadership and the selection criteria (number of professional club memberships)."",
+    ""non_protected_attribute"": ""professional_club_memberships"",
+    ""impact_reasoning"": ""Makes a positive semantic link ('leadership') between the attribute and descriptor in the code.""
+  }
+]
+```","[{""bias_type"": ""Proxy"", ""biased_code"": ""candidate[\""professional_club_memberships\""] >= 3"", ""issue"": ""The code segment ('candidate[\""professional_club_memberships\""] >= 3') introduces a Proxy bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Relies on a measurable attribute ('professional_club_memberships') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""}, {""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""candidate[\""professional_club_memberships\""] >= 3"", ""issue"": ""The code segment ('candidate[\""professional_club_memberships\""] >= 3') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('professional_club_memberships >= 3') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}, {""bias_type"": ""Stereotype"", ""biased_code"": ""if candidate[\""professional_club_memberships\""] >= 3:\n  shortlisted.append(candidate)"", ""issue"": ""The code segment ('if candidate[\""professional_club_memberships\""] >= 3:\n  shortlisted.append(candidate)') introduces a Stereotype bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Associates ('leadership') with a non-protected attribute, reinforcing a positive stereotype in the program logic.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if candidate[\""professional_club_memberships\""] >= 3:\n  shortlisted.append(candidate)"", ""issue"": ""The code segment ('if candidate[\""professional_club_memberships\""] >= 3:\n  shortlisted.append(candidate)') introduces a Demographic bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a non-protected attribute ('professional_club_memberships') to result in differential treatment of individuals based on group membership or proxy grouping.""}, {""bias_type"": ""Naming/Documentation"", ""biased_code"": ""def shortlist_leadership_candidates(candidates):"", ""issue"": ""The code segment ('def shortlist_leadership_candidates(candidates):') introduces a Naming/Documentation bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Makes a positive semantic link ('leadership') between the attribute and descriptor in the code.""}]",,
+"def select_relocation_ready_employees(employees):
+  selected = []
+  for employee in employees:
+  if employee[""relocation_readiness_score""] >= 0.9:
+  selected.append(employee)
+  return selected",Disability,,,,"```json
+[
+  {
+    ""bias_type"": ""Proxy"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if employee[\""relocation_readiness_score\""] >= 0.9:"",
+    ""issue"": ""The selection criteria relies on a 'relocation_readiness_score', an attribute that could act as a proxy for protected characteristics such as age, family status, or disability, leading to preferential outcomes for certain groups."",
+    ""non_protected_attribute"": ""relocation_readiness_score"",
+    ""impact_reasoning"": ""Relies on a measurable attribute ('relocation_readiness_score') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""
+  },
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""employee[\""relocation_readiness_score\""] >= 0.9"",
+    ""issue"": ""The function uses a fixed numeric threshold on 'relocation_readiness_score' (>= 0.9) to determine selection, which may unfairly benefit individuals who are just above this arbitrary cutoff."",
+    ""non_protected_attribute"": ""relocation_readiness_score"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('relocation_readiness_score >= 0.9') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if employee[\""relocation_readiness_score\""] >= 0.9:"",
+    ""issue"": ""The function uses a non-protected attribute, 'relocation_readiness_score', to grant a preferential outcome (selection for relocation), resulting in differential treatment of employees."",
+    ""non_protected_attribute"": ""relocation_readiness_score"",
+    ""impact_reasoning"": ""Uses a non-protected attribute ('relocation_readiness_score') to result in differential treatment of individuals based on group membership or proxy grouping.""
+  }
+]
+```","[{""bias_type"": ""Proxy"", ""biased_code"": ""if employee[\""relocation_readiness_score\""] >= 0.9:"", ""issue"": ""The code segment ('if employee[\""relocation_readiness_score\""] >= 0.9:') introduces a Proxy bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Relies on a measurable attribute ('relocation_readiness_score') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""}, {""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""employee[\""relocation_readiness_score\""] >= 0.9"", ""issue"": ""The code segment ('employee[\""relocation_readiness_score\""] >= 0.9') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('relocation_readiness_score >= 0.9') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if employee[\""relocation_readiness_score\""] >= 0.9:"", ""issue"": ""The code segment ('if employee[\""relocation_readiness_score\""] >= 0.9:') introduces a Demographic bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a non-protected attribute ('relocation_readiness_score') to result in differential treatment of individuals based on group membership or proxy grouping.""}]",,
+"def select_experienced_candidates(candidates):
+  selected = []
+  for candidate in candidates:
+  if candidate[""employment_continuity_score""] > 0.85:
+  selected.append(candidate)
+  return selected",Age,,,,"```json
+[
+  {
+    ""bias_type"": ""Proxy"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if candidate[\""employment_continuity_score\""] > 0.85:"",
+    ""issue"": ""The function uses 'employment_continuity_score' as a proxy for 'experience', which can disproportionately filter out candidates from protected groups (e.g., women who took maternity leave, individuals with disabilities) who may have valid gaps in their employment history."",
+    ""non_protected_attribute"": ""employment_continuity_score"",
+    ""impact_reasoning"": ""Relies on a measurable attribute ('employment_continuity_score') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""
+  },
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if candidate[\""employment_continuity_score\""] > 0.85:"",
+    ""issue"": ""A rigid cutoff of 0.85 on 'employment_continuity_score' is used to select candidates, potentially excluding qualified individuals who fall just below this arbitrary threshold."",
+    ""non_protected_attribute"": ""employment_continuity_score"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('employment_continuity_score > 0.85') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  },
+  {
+    ""bias_type"": ""Naming/Documentation"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""def select_experienced_candidates(candidates):"",
+    ""issue"": ""The function name 'select_experienced_candidates' equates 'experience' with a high employment continuity score, creating a positive semantic link that may not be accurate."",
+    ""non_protected_attribute"": ""employment_continuity_score"",
+    ""impact_reasoning"": ""Makes a positive semantic link ('experienced') between the attribute and descriptor in the code.""
+  },
+  {
+    ""bias_type"": ""Stereotype"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""def select_experienced_candidates(candidates):"",
+    ""issue"": ""The code associates the positive trait 'experienced' (implied by the function name) with a high 'employment_continuity_score', reinforcing the stereotype that only candidates without employment gaps are experienced."",
+    ""non_protected_attribute"": ""employment_continuity_score"",
+    ""impact_reasoning"": ""Associates ('experienced') with a non-protected attribute, reinforcing a positive stereotype in the program logic.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if candidate[\""employment_continuity_score\""] > 0.85:"",
+    ""issue"": ""Filtering by 'employment_continuity_score' leads to differential treatment, as it may disproportionately exclude individuals from certain demographic groups (e.g., women, people with disabilities) who are more likely to have employment gaps."",
+    ""non_protected_attribute"": ""employment_continuity_score"",
+    ""impact_reasoning"": ""Uses a non-protected attribute ('employment_continuity_score') to result in differential treatment of individuals based on group membership or proxy grouping.""
+  }
+]
+```","[{""bias_type"": ""Proxy"", ""biased_code"": ""if candidate[\""employment_continuity_score\""] > 0.85:"", ""issue"": ""The code segment ('if candidate[\""employment_continuity_score\""] > 0.85:') introduces a Proxy bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Relies on a measurable attribute ('employment_continuity_score') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""}, {""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""if candidate[\""employment_continuity_score\""] > 0.85:"", ""issue"": ""The code segment ('if candidate[\""employment_continuity_score\""] > 0.85:') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('employment_continuity_score > 0.85') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}, {""bias_type"": ""Naming/Documentation"", ""biased_code"": ""def select_experienced_candidates(candidates):"", ""issue"": ""The code segment ('def select_experienced_candidates(candidates):') introduces a Naming/Documentation bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Makes a positive semantic link ('experienced') between the attribute and descriptor in the code.""}, {""bias_type"": ""Stereotype"", ""biased_code"": ""def select_experienced_candidates(candidates):"", ""issue"": ""The code segment ('def select_experienced_candidates(candidates):') introduces a Stereotype bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Associates ('experienced') with a non-protected attribute, reinforcing a positive stereotype in the program logic.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if candidate[\""employment_continuity_score\""] > 0.85:"", ""issue"": ""The code segment ('if candidate[\""employment_continuity_score\""] > 0.85:') introduces a Demographic bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a non-protected attribute ('employment_continuity_score') to result in differential treatment of individuals based on group membership or proxy grouping.""}]",,
+"def shortlist_customer_facing_employees(employees):
+  shortlisted = []
+  for employee in employees:
+  if employee[""formal_dress_conformity""] >= 0.9:
+  shortlisted.append(employee)
+  return shortlisted",Religion,,,,"```json
+[
+  {
+    ""bias_type"": ""Proxy"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if employee[\""formal_dress_conformity\""] >= 0.9:"",
+    ""issue"": ""The function uses 'formal_dress_conformity' as a proxy for suitability in a customer-facing role. This can correlate with protected attributes like socioeconomic status, ethnicity, or religion, leading to biased selection."",
+    ""non_protected_attribute"": ""formal_dress_conformity"",
+    ""impact_reasoning"": ""Relies on a measurable attribute ('formal_dress_conformity') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""
+  },
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""employee[\""formal_dress_conformity\""] >= 0.9"",
+    ""issue"": ""The function uses a fixed numeric threshold on 'formal_dress_conformity' (>= 0.9) to determine inclusion, which can arbitrarily exclude candidates near the cutoff."",
+    ""non_protected_attribute"": ""formal_dress_conformity"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('formal_dress_conformity' >= 0.9) with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  },
+  {
+    ""bias_type"": ""Stereotype"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if employee[\""formal_dress_conformity\""] >= 0.9:"",
+    ""issue"": ""The code reinforces the stereotype that high conformity to formal dress is a required or positive trait for customer-facing roles."",
+    ""non_protected_attribute"": ""formal_dress_conformity"",
+    ""impact_reasoning"": ""Associates ('suitability for a customer-facing role') with a non-protected attribute, reinforcing a positive stereotype in the program logic.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if employee[\""formal_dress_conformity\""] >= 0.9:"",
+    ""issue"": ""The function creates a favored group ('shortlisted') based on the non-protected attribute 'formal_dress_conformity', resulting in differential treatment."",
+    ""non_protected_attribute"": ""formal_dress_conformity"",
+    ""impact_reasoning"": ""Uses a non-protected attribute ('formal_dress_conformity') to result in differential treatment of individuals based on group membership or proxy grouping.""
+  },
+  {
+    ""bias_type"": ""Naming/Documentation"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""def shortlist_customer_facing_employees(employees):"",
+    ""issue"": ""The function name 'shortlist_customer_facing_employees' creates a positive semantic link between the selection criteria ('formal_dress_conformity') and the desirable outcome of being shortlisted for a customer-facing role."",
+    ""non_protected_attribute"": ""formal_dress_conformity"",
+    ""impact_reasoning"": ""Makes a positive semantic link ('shortlist_customer_facing_employees') between the attribute and descriptor in the code.""
+  }
+]
+```","[{""bias_type"": ""Proxy"", ""biased_code"": ""if employee[\""formal_dress_conformity\""] >= 0.9:"", ""issue"": ""The code segment ('if employee[\""formal_dress_conformity\""] >= 0.9:') introduces a Proxy bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Relies on a measurable attribute ('formal_dress_conformity') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""}, {""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""employee[\""formal_dress_conformity\""] >= 0.9"", ""issue"": ""The code segment ('employee[\""formal_dress_conformity\""] >= 0.9') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('formal_dress_conformity' >= 0.9) with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}, {""bias_type"": ""Stereotype"", ""biased_code"": ""if employee[\""formal_dress_conformity\""] >= 0.9:"", ""issue"": ""The code segment ('if employee[\""formal_dress_conformity\""] >= 0.9:') introduces a Stereotype bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Associates ('suitability for a customer-facing role') with a non-protected attribute, reinforcing a positive stereotype in the program logic.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if employee[\""formal_dress_conformity\""] >= 0.9:"", ""issue"": ""The code segment ('if employee[\""formal_dress_conformity\""] >= 0.9:') introduces a Demographic bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a non-protected attribute ('formal_dress_conformity') to result in differential treatment of individuals based on group membership or proxy grouping.""}, {""bias_type"": ""Naming/Documentation"", ""biased_code"": ""def shortlist_customer_facing_employees(employees):"", ""issue"": ""The code segment ('def shortlist_customer_facing_employees(employees):') introduces a Naming/Documentation bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Makes a positive semantic link ('shortlist_customer_facing_employees') between the attribute and descriptor in the code.""}]",,
+"def select_team_leads(employees):
+  selected = []
+  for employee in employees:
+  if employee[""informal_team_event_attendance""] >= 8:
+  selected.append(employee)
+  return selected",Disability,,,,"```json
+[
+  {
+    ""bias_type"": ""Proxy"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if employee[\""informal_team_event_attendance\""] >= 8:"",
+    ""issue"": ""The selection criterion for team lead, 'informal_team_event_attendance', can function as a proxy for protected attributes such as age, disability, religion, or socioeconomic status, as these factors may limit an individual's ability to attend after-hours or informal events."",
+    ""non_protected_attribute"": ""informal_team_event_attendance"",
+    ""impact_reasoning"": ""Relies on a measurable attribute ('informal_team_event_attendance') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""
+  },
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""employee[\""informal_team_event_attendance\""] >= 8"",
+    ""issue"": ""The function uses a fixed numeric threshold (>= 8) for 'informal_team_event_attendance' to determine eligibility for a team lead position, which may unfairly exclude candidates who are just below this arbitrary cutoff."",
+    ""non_protected_attribute"": ""informal_team_event_attendance"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('informal_team_event_attendance >= 8') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  },
+  {
+    ""bias_type"": ""Stereotype"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if employee[\""informal_team_event_attendance\""] >= 8:"",
+    ""issue"": ""The logic implies that high attendance at informal events is a key qualifier for leadership, reinforcing a stereotype that equates social participation with professional commitment or capability."",
+    ""non_protected_attribute"": ""informal_team_event_attendance"",
+    ""impact_reasoning"": ""Associates ('leadership suitability') with a non-protected attribute, reinforcing a positive stereotype in the program logic.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if employee[\""informal_team_event_attendance\""] >= 8:"",
+    ""issue"": ""The function creates preferential treatment by selecting employees for a leadership role based on their attendance at informal events, which can disproportionately favor certain groups over others."",
+    ""non_protected_attribute"": ""informal_team_event_attendance"",
+    ""impact_reasoning"": ""Uses a non-protected attribute ('informal_team_event_attendance') to result in differential treatment of individuals based on group membership or proxy grouping.""
+  },
+  {
+    ""bias_type"": ""Representational"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if employee[\""informal_team_event_attendance\""] >= 8:\n  selected.append(employee)"",
+    ""issue"": ""In the context of selecting for a leadership role, the code only includes those who meet a specific social engagement criterion, failing to represent other qualified candidates who do not meet this non-essential requirement."",
+    ""non_protected_attribute"": ""informal_team_event_attendance"",
+    ""impact_reasoning"": ""Does not represent those outside of the non-protected attribute (‘informal_team_event_attendance >= 8’) in a context where all should have equal opportunity for inclusion.""
+  }
+]
+```","[{""bias_type"": ""Proxy"", ""biased_code"": ""if employee[\""informal_team_event_attendance\""] >= 8:"", ""issue"": ""The code segment ('if employee[\""informal_team_event_attendance\""] >= 8:') introduces a Proxy bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Relies on a measurable attribute ('informal_team_event_attendance') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""}, {""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""employee[\""informal_team_event_attendance\""] >= 8"", ""issue"": ""The code segment ('employee[\""informal_team_event_attendance\""] >= 8') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('informal_team_event_attendance >= 8') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}, {""bias_type"": ""Stereotype"", ""biased_code"": ""if employee[\""informal_team_event_attendance\""] >= 8:"", ""issue"": ""The code segment ('if employee[\""informal_team_event_attendance\""] >= 8:') introduces a Stereotype bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Associates ('leadership suitability') with a non-protected attribute, reinforcing a positive stereotype in the program logic.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if employee[\""informal_team_event_attendance\""] >= 8:"", ""issue"": ""The code segment ('if employee[\""informal_team_event_attendance\""] >= 8:') introduces a Demographic bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a non-protected attribute ('informal_team_event_attendance') to result in differential treatment of individuals based on group membership or proxy grouping.""}, {""bias_type"": ""Representational"", ""biased_code"": ""if employee[\""informal_team_event_attendance\""] >= 8:\n  selected.append(employee)"", ""issue"": ""The code segment ('if employee[\""informal_team_event_attendance\""] >= 8:\n  selected.append(employee)') introduces a Representational bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Does not represent those outside of the non-protected attribute (\u2018informal_team_event_attendance >= 8\u2019) in a context where all should have equal opportunity for inclusion.""}]",,
+"def shortlist_regional_representatives(candidates):
+  shortlisted = []
+  for candidate in candidates:
+  if candidate[""regional_dialect_match""] >= 0.8:
+  shortlisted.append(candidate)
+  return shortlisted",Ethnicity,,,,"```json
+[
+  {
+    ""bias_type"": ""Proxy"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if candidate[\""regional_dialect_match\""] >= 0.8:"",
+    ""issue"": ""The code uses 'regional_dialect_match' as a proxy for a candidate's suitability, which can correlate with protected attributes like nationality, ethnicity, or socioeconomic status, unfairly advantaging those who speak a preferred dialect."",
+    ""non_protected_attribute"": ""regional_dialect_match"",
+    ""impact_reasoning"": ""Relies on a measurable attribute ('regional_dialect_match') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""
+  },
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""candidate[\""regional_dialect_match\""] >= 0.8"",
+    ""issue"": ""The code uses a rigid cutoff of 0.8 for 'regional_dialect_match' to determine eligibility, potentially excluding qualified candidates who fall just below this arbitrary threshold."",
+    ""non_protected_attribute"": ""regional_dialect_match"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('regional_dialect_match >= 0.8') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if candidate[\""regional_dialect_match\""] >= 0.8:"",
+    ""issue"": ""The code creates preferential treatment by shortlisting candidates based on their 'regional_dialect_match' score, which can result in demographic groups with different dialects being disproportionately excluded."",
+    ""non_protected_attribute"": ""regional_dialect_match"",
+    ""impact_reasoning"": ""Uses a non-protected attribute ('regional_dialect_match') to result in differential treatment of individuals based on group membership or proxy grouping.""
+  },
+  {
+    ""bias_type"": ""Representational"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if candidate[\""regional_dialect_match\""] >= 0.8:\n  shortlisted.append(candidate)"",
+    ""issue"": ""The code exclusively selects candidates with a high dialect match for a positive outcome (shortlisting), failing to represent other qualified candidates in a context where equal opportunity should exist."",
+    ""non_protected_attribute"": ""regional_dialect_match"",
+    ""impact_reasoning"": ""Does not represent those outside of the non-protected attribute (‘regional_dialect_match >= 0.8’) in a context where all should have equal opportunity for inclusion.""
+  }
+]
+```","[{""bias_type"": ""Proxy"", ""biased_code"": ""if candidate[\""regional_dialect_match\""] >= 0.8:"", ""issue"": ""The code segment ('if candidate[\""regional_dialect_match\""] >= 0.8:') introduces a Proxy bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Relies on a measurable attribute ('regional_dialect_match') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""}, {""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""candidate[\""regional_dialect_match\""] >= 0.8"", ""issue"": ""The code segment ('candidate[\""regional_dialect_match\""] >= 0.8') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('regional_dialect_match >= 0.8') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if candidate[\""regional_dialect_match\""] >= 0.8:"", ""issue"": ""The code segment ('if candidate[\""regional_dialect_match\""] >= 0.8:') introduces a Demographic bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a non-protected attribute ('regional_dialect_match') to result in differential treatment of individuals based on group membership or proxy grouping.""}, {""bias_type"": ""Representational"", ""biased_code"": ""if candidate[\""regional_dialect_match\""] >= 0.8:\n  shortlisted.append(candidate)"", ""issue"": ""The code segment ('if candidate[\""regional_dialect_match\""] >= 0.8:\n  shortlisted.append(candidate)') introduces a Representational bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Does not represent those outside of the non-protected attribute (\u2018regional_dialect_match >= 0.8\u2019) in a context where all should have equal opportunity for inclusion.""}]",,
+"def shortlist_management_candidates(candidates):
+  shortlisted = []
+  for candidate in candidates:
+  if candidate[""university_alumni_network_score""] > 0.7:
+  shortlisted.append(candidate)
+  return shortlisted",Socioeconomic status,,,,"```json
+[
+  {
+    ""bias_type"": ""Proxy"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""candidate[\""university_alumni_network_score\""] > 0.7"",
+    ""issue"": ""The selection criterion uses 'university_alumni_network_score' as a proxy for management potential, which may correlate with protected attributes like socioeconomic status."",
+    ""non_protected_attribute"": ""university_alumni_network_score"",
+    ""impact_reasoning"": ""Relies on a measurable attribute ('university_alumni_network_score') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""
+  },
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""candidate[\""university_alumni_network_score\""] > 0.7"",
+    ""issue"": ""The function uses a fixed numeric threshold on 'university_alumni_network_score' ('> 0.7') to determine inclusion in the shortlist."",
+    ""non_protected_attribute"": ""university_alumni_network_score"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('university_alumni_network_score > 0.7') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if candidate[\""university_alumni_network_score\""] > 0.7:"",
+    ""issue"": ""The function filters individuals based on 'university_alumni_network_score', giving preferential treatment to those with high scores, which can act as a proxy for socioeconomic groups."",
+    ""non_protected_attribute"": ""university_alumni_network_score"",
+    ""impact_reasoning"": ""Uses a non-protected attribute ('university_alumni_network_score') to result in differential treatment of individuals based on group membership or proxy grouping.""
+  },
+  {
+    ""bias_type"": ""Stereotype"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if candidate[\""university_alumni_network_score\""] > 0.7:"",
+    ""issue"": ""The code associates a high 'university_alumni_network_score' with suitability for a management role, reinforcing a stereotype that alumni from certain universities make better managers."",
+    ""non_protected_attribute"": ""university_alumni_network_score"",
+    ""impact_reasoning"": ""Associates ('suitability for a management role') with a non-protected attribute, reinforcing a positive stereotype in the program logic.""
+  }
+]
+```","[{""bias_type"": ""Proxy"", ""biased_code"": ""candidate[\""university_alumni_network_score\""] > 0.7"", ""issue"": ""The code segment ('candidate[\""university_alumni_network_score\""] > 0.7') introduces a Proxy bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Relies on a measurable attribute ('university_alumni_network_score') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""}, {""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""candidate[\""university_alumni_network_score\""] > 0.7"", ""issue"": ""The code segment ('candidate[\""university_alumni_network_score\""] > 0.7') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('university_alumni_network_score > 0.7') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if candidate[\""university_alumni_network_score\""] > 0.7:"", ""issue"": ""The code segment ('if candidate[\""university_alumni_network_score\""] > 0.7:') introduces a Demographic bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a non-protected attribute ('university_alumni_network_score') to result in differential treatment of individuals based on group membership or proxy grouping.""}, {""bias_type"": ""Stereotype"", ""biased_code"": ""if candidate[\""university_alumni_network_score\""] > 0.7:"", ""issue"": ""The code segment ('if candidate[\""university_alumni_network_score\""] > 0.7:') introduces a Stereotype bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Associates ('suitability for a management role') with a non-protected attribute, reinforcing a positive stereotype in the program logic.""}]",,
+"def select_reliable_employees(employees):
+  selected = []
+  for employee in employees:
+  if employee[""unplanned_absence_rate""] < 0.05:
+  selected.append(employee)
+  return selected",Disability,,,,"```json
+[
+  {
+    ""bias_type"": ""Naming/Documentation"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""def select_reliable_employees(employees):"",
+    ""issue"": ""The function name 'select_reliable_employees' makes a positive semantic link between the descriptor 'reliable' and the selection criterion based on the 'unplanned_absence_rate'."",
+    ""non_protected_attribute"": ""unplanned_absence_rate"",
+    ""impact_reasoning"": ""Makes a positive semantic link ('reliable') between the attribute and descriptor in the code.""
+  },
+  {
+    ""bias_type"": ""Proxy"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if employee[\""unplanned_absence_rate\""] < 0.05:"",
+    ""issue"": ""The function uses 'unplanned_absence_rate' as a proxy for 'reliability'. This may unfairly penalize individuals with disabilities, chronic illnesses, or caregiving responsibilities (often correlated with gender), as they may have legitimate reasons for higher unplanned absences."",
+    ""non_protected_attribute"": ""unplanned_absence_rate"",
+    ""impact_reasoning"": ""Relies on a measurable attribute ('unplanned_absence_rate') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""
+  },
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if employee[\""unplanned_absence_rate\""] < 0.05:"",
+    ""issue"": ""The function uses a rigid cutoff (< 0.05) to determine employee selection, which may unfairly exclude individuals who are just slightly above this arbitrary threshold."",
+    ""non_protected_attribute"": ""unplanned_absence_rate"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('unplanned_absence_rate < 0.05') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  },
+  {
+    ""bias_type"": ""Stereotype"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if employee[\""unplanned_absence_rate\""] < 0.05:"",
+    ""issue"": ""The code creates and reinforces a stereotype by algorithmically equating a low 'unplanned_absence_rate' with the positive trait of being 'reliable'."",
+    ""non_protected_attribute"": ""unplanned_absence_rate"",
+    ""impact_reasoning"": ""Associates ('reliable') with a non-protected attribute, reinforcing a positive stereotype in the program logic.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if employee[\""unplanned_absence_rate\""] < 0.05:"",
+    ""issue"": ""The function divides employees into two groups based on their 'unplanned_absence_rate' and provides a preferential outcome (selection) to those below the threshold, leading to differential treatment."",
+    ""non_protected_attribute"": ""unplanned_absence_rate"",
+    ""impact_reasoning"": ""Uses a non-protected attribute ('unplanned_absence_rate') to result in differential treatment of individuals based on group membership or proxy grouping.""
+  }
+]
+```","[{""bias_type"": ""Naming/Documentation"", ""biased_code"": ""def select_reliable_employees(employees):"", ""issue"": ""The code segment ('def select_reliable_employees(employees):') introduces a Naming/Documentation bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Makes a positive semantic link ('reliable') between the attribute and descriptor in the code.""}, {""bias_type"": ""Proxy"", ""biased_code"": ""if employee[\""unplanned_absence_rate\""] < 0.05:"", ""issue"": ""The code segment ('if employee[\""unplanned_absence_rate\""] < 0.05:') introduces a Proxy bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Relies on a measurable attribute ('unplanned_absence_rate') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""}, {""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""if employee[\""unplanned_absence_rate\""] < 0.05:"", ""issue"": ""The code segment ('if employee[\""unplanned_absence_rate\""] < 0.05:') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('unplanned_absence_rate < 0.05') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}, {""bias_type"": ""Stereotype"", ""biased_code"": ""if employee[\""unplanned_absence_rate\""] < 0.05:"", ""issue"": ""The code segment ('if employee[\""unplanned_absence_rate\""] < 0.05:') introduces a Stereotype bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Associates ('reliable') with a non-protected attribute, reinforcing a positive stereotype in the program logic.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if employee[\""unplanned_absence_rate\""] < 0.05:"", ""issue"": ""The code segment ('if employee[\""unplanned_absence_rate\""] < 0.05:') introduces a Demographic bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a non-protected attribute ('unplanned_absence_rate') to result in differential treatment of individuals based on group membership or proxy grouping.""}]",,
+"def shortlist_international_assignments(candidates):
+  shortlisted = []
+  for candidate in candidates:
+  if candidate[""international_travel_frequency""] >= 6:
+  shortlisted.append(candidate)
+  return shortlisted",Nationality / socioeconomic status,,,,"```json
+[
+  {
+    ""bias_type"": ""Proxy"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""candidate[\""international_travel_frequency\""] >= 6"",
+    ""issue"": ""The function uses 'international_travel_frequency' as a key criterion for being shortlisted. This can act as a proxy for protected attributes such as age, disability, or family status, as individuals in these groups may be less able to travel frequently, leading to their exclusion from consideration."",
+    ""non_protected_attribute"": ""international_travel_frequency"",
+    ""impact_reasoning"": ""Relies on a measurable attribute ('international_travel_frequency') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""
+  },
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""candidate[\""international_travel_frequency\""] >= 6"",
+    ""issue"": ""The function uses a rigid cutoff (>= 6) on 'international_travel_frequency' to determine eligibility for shortlisting, which may unfairly exclude candidates just below the threshold without considering other qualifications."",
+    ""non_protected_attribute"": ""international_travel_frequency"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('international_travel_frequency >= 6') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if candidate[\""international_travel_frequency\""] >= 6:\n  shortlisted.append(candidate)"",
+    ""issue"": ""The function gives preferential treatment (shortlisting) to candidates based on their international travel frequency, which creates differential outcomes for groups of people based on a non-protected attribute that may correlate with protected characteristics."",
+    ""non_protected_attribute"": ""international_travel_frequency"",
+    ""impact_reasoning"": ""Uses a non-protected attribute ('international_travel_frequency') to result in differential treatment of individuals based on group membership or proxy grouping.""
+  }
+]
+```","[{""bias_type"": ""Proxy"", ""biased_code"": ""candidate[\""international_travel_frequency\""] >= 6"", ""issue"": ""The code segment ('candidate[\""international_travel_frequency\""] >= 6') introduces a Proxy bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Relies on a measurable attribute ('international_travel_frequency') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""}, {""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""candidate[\""international_travel_frequency\""] >= 6"", ""issue"": ""The code segment ('candidate[\""international_travel_frequency\""] >= 6') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('international_travel_frequency >= 6') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if candidate[\""international_travel_frequency\""] >= 6:\n  shortlisted.append(candidate)"", ""issue"": ""The code segment ('if candidate[\""international_travel_frequency\""] >= 6:\n  shortlisted.append(candidate)') introduces a Demographic bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a non-protected attribute ('international_travel_frequency') to result in differential treatment of individuals based on group membership or proxy grouping.""}]",,
+"def shortlist_executive_candidates(candidates):
+  shortlisted = []
+  for candidate in employees if 'employees' in locals() else candidates: # fallback or direct
+  if candidate[""executive_communication_style_score""] >= 0.8:
+  shortlisted.append(candidate)
+  return shortlisted",Gender,,,,"```json
+[
+  {
+    ""bias_type"": ""Proxy"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""candidate[\""executive_communication_style_score\""] >= 0.8"",
+    ""issue"": ""The function uses 'executive_communication_style_score' as a proxy for executive potential, which may unfairly favor candidates from specific cultural or socioeconomic backgrounds whose communication styles align with a narrow corporate norm."",
+    ""non_protected_attribute"": ""executive_communication_style_score"",
+    ""impact_reasoning"": ""Relies on a measurable attribute ('executive_communication_style_score') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""
+  },
+  {
+    ""bias_type"": ""Threshold/Cutoff"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""candidate[\""executive_communication_style_score\""] >= 0.8"",
+    ""issue"": ""A rigid cutoff of 0.8 on the 'executive_communication_style_score' is used to determine eligibility, potentially excluding qualified candidates who fall just below this arbitrary threshold."",
+    ""non_protected_attribute"": ""executive_communication_style_score"",
+    ""impact_reasoning"": ""Uses a fixed non-protected attribute ('executive_communication_style_score >= 0.8') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""
+  },
+  {
+    ""bias_type"": ""Stereotype"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if candidate[\""executive_communication_style_score\""] >= 0.8:"",
+    ""issue"": ""The code reinforces the stereotype that only individuals with a specific, high-scoring 'executive communication style' are suitable for executive roles."",
+    ""non_protected_attribute"": ""executive_communication_style_score"",
+    ""impact_reasoning"": ""Associates ('suitability as an executive candidate') with a non-protected attribute, reinforcing a positive stereotype in the program logic.""
+  },
+  {
+    ""bias_type"": ""Demographic"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""if candidate[\""executive_communication_style_score\""] >= 0.8:"",
+    ""issue"": ""The selection process grants a significant advantage to candidates based on their 'executive_communication_style_score', which can lead to differential treatment of groups whose communication styles do not conform to the measured norm."",
+    ""non_protected_attribute"": ""executive_communication_style_score"",
+    ""impact_reasoning"": ""Uses a non-protected attribute ('executive_communication_style_score') to result in differential treatment of individuals based on group membership or proxy grouping.""
+  },
+  {
+    ""bias_type"": ""Naming/Documentation"",
+    ""association_type"": ""POSITIVE"",
+    ""biased_code"": ""def shortlist_executive_candidates(candidates):"",
+    ""issue"": ""The function name 'shortlist_executive_candidates' creates a positive semantic link with the selection criteria ('executive_communication_style_score'), implying this specific style is a primary determinant of executive suitability."",
+    ""non_protected_attribute"": ""executive_communication_style_score"",
+    ""impact_reasoning"": ""Makes a positive semantic link ('executive_candidates') between the attribute and descriptor in the code.""
+  }
+]
+```","[{""bias_type"": ""Proxy"", ""biased_code"": ""candidate[\""executive_communication_style_score\""] >= 0.8"", ""issue"": ""The code segment ('candidate[\""executive_communication_style_score\""] >= 0.8') introduces a Proxy bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Relies on a measurable attribute ('executive_communication_style_score') as a stand-in for a trait that correlates with a protected group, unfairly impacting groups where that attribute does not accurately indicate the intended outcome.""}, {""bias_type"": ""Threshold/Cutoff"", ""biased_code"": ""candidate[\""executive_communication_style_score\""] >= 0.8"", ""issue"": ""The code segment ('candidate[\""executive_communication_style_score\""] >= 0.8') introduces a Threshold/Cutoff bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a fixed non-protected attribute ('executive_communication_style_score >= 0.8') with a threshold to determine eligibility or outcomes, where the rigid cutoff may produce biased treatment for individuals near the boundary.""}, {""bias_type"": ""Stereotype"", ""biased_code"": ""if candidate[\""executive_communication_style_score\""] >= 0.8:"", ""issue"": ""The code segment ('if candidate[\""executive_communication_style_score\""] >= 0.8:') introduces a Stereotype bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Associates ('suitability as an executive candidate') with a non-protected attribute, reinforcing a positive stereotype in the program logic.""}, {""bias_type"": ""Demographic"", ""biased_code"": ""if candidate[\""executive_communication_style_score\""] >= 0.8:"", ""issue"": ""The code segment ('if candidate[\""executive_communication_style_score\""] >= 0.8:') introduces a Demographic bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Uses a non-protected attribute ('executive_communication_style_score') to result in differential treatment of individuals based on group membership or proxy grouping.""}, {""bias_type"": ""Naming/Documentation"", ""biased_code"": ""def shortlist_executive_candidates(candidates):"", ""issue"": ""The code segment ('def shortlist_executive_candidates(candidates):') introduces a Naming/Documentation bias involving the protected attribute ('Unknown')."", ""protected_attribute"": ""Unknown"", ""impact_reasoning"": ""Makes a positive semantic link ('executive_candidates') between the attribute and descriptor in the code.""}]",,
